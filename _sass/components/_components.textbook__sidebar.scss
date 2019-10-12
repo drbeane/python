@@ -17,7 +17,7 @@ $color-sidebar-divider: #bbb !default;
 
 .c-textbook__sidebar {
   /*background-color: $color-sidebar-bg;*/
-  background-color: #e3eefa;
+  background-color: #ecf5fe;
   padding: $spacing-unit-small;
 
   @include inuit-font-size(14px);
@@ -95,8 +95,8 @@ li.c-sidebar__subsection {
 .c-sidebar__divider {
   border-top: 1px solid $color-sidebar-divider;
   /*margin: $spacing-unit-tiny;*/
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* [5] */
