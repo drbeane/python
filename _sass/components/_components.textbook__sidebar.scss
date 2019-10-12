@@ -32,7 +32,7 @@ $color-sidebar-divider: #bbb !default;
 
 
 .c-sidebar__title {
-  margin-bottom: -4px;
+  margin-bottom: 4px;
 }
 
 /* [1] */
@@ -44,6 +44,7 @@ $color-sidebar-divider: #bbb !default;
 
 li.c-sidebar__chapter > a {
   font-size: 1.0em;
+  margin-left: 4px;
   margin-bottom: -10px;
 }
 
@@ -55,7 +56,7 @@ li.c-sidebar__chapter > a {
 }
 
 li.c-sidebar__section {
-  margin-left: 10px;
+  margin-left: 8px;
   margin-bottom: -8px;
 }
 
