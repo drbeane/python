@@ -52,6 +52,7 @@
 
 - title: Python Basics
   url: /features/features
+  expand_sections: false
   sections:
     - title: Arithmetic
       url: /a1
@@ -60,6 +61,7 @@
     - title: Basic Data Types
       url: /a3
       subsections:
+      expand_sections: false
       - title: Integers
         url: /a5
       - title: Floats
@@ -71,6 +73,7 @@
     - title: Data Structures
       url: /a4
       subsections:
+      expand_sections: false
       - title: Lists
         url: /a9
       - title: Tuples
