@@ -10,7 +10,7 @@
  * [5]: The logo displayed above the sidebar
  * [6]: The footer at the bottom of the sidebar
  */
-$color-sidebar-bg: rgba(137, 12, 201, 0) !default;
+$color-sidebar-bg: rgba(255, 255, 255, 0) !default;
 $color-sidebar-entry: #364149 !default;
 $color-sidebar-entry--active: $color-links !default;
 $color-sidebar-divider: #bbb !default;
@@ -38,13 +38,12 @@ $color-sidebar-divider: #bbb !default;
 }
 
 li.c-sidebar__chapter > a {
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 /* [1] */
 .c-sidebar__sections {
   list-style: none;
-  font-size: 0.8em;
   margin-left: $spacing-unit-small;
   margin-bottom: 0;
 }
