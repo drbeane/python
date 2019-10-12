@@ -99,8 +99,11 @@
 - title: Functions
   url: /features/markdown
   sections:
-    - title: Defining Functions
-    - title: Parameters and Arguments
+      - title: Defining Functions
+      - title: Parameters and Arguments
+      - title: Return Values
+      - title: Scope
+      - title: Lambda Functions
 
 
 - divider: true
