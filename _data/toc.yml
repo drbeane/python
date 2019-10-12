@@ -97,8 +97,8 @@
     - title: Error Handling
 
 -title: Functions
-    sections:
     url: /features/markdown
+    sections:
         -title: Defining Functions
         -title: Parameters and Arguments
 
