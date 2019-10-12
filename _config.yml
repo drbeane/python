@@ -16,9 +16,9 @@
 
 #######################################################################################
 # Jekyll site settings
-title: YOUR BOOK NAME
-author: YOUR AUTHOR NAME
-email: YOUR EMAIL
+title: Python for Data Science
+author: Robbie Beane
+email: rbeane@maryville.edu
 description: >-
   This is an example book built with Jupyter Books.
 

@@ -23,34 +23,32 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Data 100 Homepage
-  url: http://ds100.org/
-  not_numbered: true
-  external: true
-  # Hard-coded redirects used to avoid breaking links when modifying the book.
-  # Each redirect needs a `from` and `to` key. Redirects can technically get
-  # placed in any chapter but we'll keep them all here for simplicity.
-  redirects:
-    - from: ch/05/eda_intro
-      to: ch/04/eda_intro
-    - from: ch/04/cleaning_intro
-      to: ch/05/cleaning_intro
-
-- title: Search This Book
-  search: true
-  not_numbered: true
-
-- divider: true
-
 - title: Introduction
   url: /intro
   not_numbered: true
+  external: false
+  # Hard-coded redirects used to avoid breaking links when modifying the book.
+  # Each redirect needs a `from` and `to` key. Redirects can technically get
+  # placed in any chapter but we'll keep them all here for simplicity.
+  #redirects:
+    #- from: ch/05/eda_intro
+    #  to: ch/04/eda_intro
+    #- from: ch/04/cleaning_intro
+    #  to: ch/05/cleaning_intro
 
 - title: About This Book
   url: /about_this_book
   not_numbered: true
 
+# External link
+- title: GitHub repository
+  url: https://github.com/drbeane/python
+  external: true
+  not_numbered: true
+
 - divider: true
+
+- header: The Python Language
 
 - title: Python Basics
   url: /features/features
