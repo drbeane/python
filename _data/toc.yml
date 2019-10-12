@@ -54,11 +54,8 @@
   url: /features/features
   sections:
     - title: Arithmetic
-      url: /features/features1
     - title: Variables
-      url: /features/features2
     - title: Data Types
-      url: /features/features3
 
 - title: Control Flow
   url: /features/notebooks
