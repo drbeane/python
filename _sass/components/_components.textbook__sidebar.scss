@@ -46,14 +46,14 @@ $color-sidebar-divider: #bbb !default;
 li.c-sidebar__chapter > a {
   font-size: 1.0em;
   margin-left: 6px;
-  margin-bottom: -10px;
+  margin-bottom: 2px;
 }
 
 /* [1] */
 .c-sidebar__sections {
   list-style: none;
   margin-left: $spacing-unit-small;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
 }
 
 li.c-sidebar__section {
@@ -91,7 +91,9 @@ li.c-sidebar__subsection {
 /* [3] */
 .c-sidebar__divider {
   border-top: 1px solid $color-sidebar-divider;
-  margin: $spacing-unit-tiny;
+  /*margin: $spacing-unit-tiny;*/
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 /* [5] */
