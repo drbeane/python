@@ -52,12 +52,13 @@ li.c-sidebar__chapter > a {
 /* [1] */
 .c-sidebar__sections {
   list-style: none;
+  font-size: 0.25em;
   margin-left: $spacing-unit-small;
   margin-bottom: 0;
 }
 
 li.c-sidebar__subsection {
-  font-size: 0.5em;
+  font-size: 0.25em;
   margin-left: 20px;
 }
 
