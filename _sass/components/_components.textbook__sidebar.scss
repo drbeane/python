@@ -34,8 +34,8 @@ $color-sidebar-divider: #bbb !default;
 
 .c-sidebar__title {
   font-size: 1.2em;
-  margin-top: 0px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* [1] */
@@ -96,7 +96,7 @@ li.c-sidebar__subsection {
   border-top: 1px solid $color-sidebar-divider;
   /*margin: $spacing-unit-tiny;*/
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 /* [5] */

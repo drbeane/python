@@ -221,6 +221,8 @@
 
 - divider: true
 
+- header: Appendices
+
 - title: "Appendix: Vector Space Review"
   #url: /ch/19/vector_space_review
   not_numbered: true
