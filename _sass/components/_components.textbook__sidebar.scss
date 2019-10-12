@@ -16,7 +16,8 @@ $color-sidebar-entry--active: $color-links !default;
 $color-sidebar-divider: #bbb !default;
 
 .c-textbook__sidebar {
-  background-color: $color-sidebar-bg;
+  /*background-color: $color-sidebar-bg;*/
+  background-color: #cccccc;
   padding: $spacing-unit-small;
 
   @include inuit-font-size(14px);
@@ -44,7 +45,7 @@ $color-sidebar-divider: #bbb !default;
 
 li.c-sidebar__chapter > a {
   font-size: 1.0em;
-  margin-left: 4px;
+  margin-left: 6px;
   margin-bottom: -10px;
 }
 
@@ -52,16 +53,16 @@ li.c-sidebar__chapter > a {
 .c-sidebar__sections {
   list-style: none;
   margin-left: $spacing-unit-small;
-  margin-bottom: -15px;
+  margin-bottom: 2px;
 }
 
 li.c-sidebar__section {
-  margin-left: 8px;
+  margin-left: 10px;
   margin-bottom: -8px;
 }
 
 li.c-sidebar__subsection {
-  margin-left: 20px;
+  margin-left: 24px;
   margin-bottom: -8px;
 }
 
