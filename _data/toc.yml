@@ -60,7 +60,7 @@
       url: /a2
     - title: Basic Data Types
       url: /a3
-      expand_sections: false
+      expand_subsections: false
       subsections:
       - title: Integers
         url: /a5
