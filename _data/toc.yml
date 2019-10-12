@@ -54,7 +54,7 @@
   url: /features/features
   expand_sections: false
   sections:
-    - title: Arithmetic
+    - title: Arithmetic - blah
       url: /a1
     - title: Variables
       url: /a2
