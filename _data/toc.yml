@@ -55,7 +55,13 @@
   sections:
     - title: Arithmetic
     - title: Variables
-    - title: Data Types
+    - title: Basic Data Types
+    - title: Data Structures
+      subsections:
+      - title: Lists
+      - title: Tuples
+      - title: Dictionaries
+      - title: Collections
 
 - title: Control Flow
   url: /features/notebooks
