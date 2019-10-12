@@ -17,7 +17,7 @@ $color-sidebar-divider: #bbb !default;
 
 .c-textbook__sidebar {
   /*background-color: $color-sidebar-bg;*/
-  background-color: #cccccc;
+  background-color: #e3eefa;
   padding: $spacing-unit-small;
 
   @include inuit-font-size(14px);
@@ -58,12 +58,12 @@ li.c-sidebar__chapter > a {
 
 li.c-sidebar__section {
   margin-left: 10px;
-  margin-bottom: -8px;
+  margin-bottom: 2px;
 }
 
 li.c-sidebar__subsection {
-  margin-left: 24px;
-  margin-bottom: -8px;
+  margin-left: 28px;
+  margin-bottom: 2px;
 }
 
 /* [2] */
@@ -92,8 +92,8 @@ li.c-sidebar__subsection {
 .c-sidebar__divider {
   border-top: 1px solid $color-sidebar-divider;
   /*margin: $spacing-unit-tiny;*/
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 0px;
 }
 
 /* [5] */
