@@ -37,7 +37,7 @@
     #  to: ch/05/cleaning_intro
 
 - title: About This Book
-  url: /about_this_book
+  url: /about
   not_numbered: true
 
 # External link
@@ -55,63 +55,63 @@
   expand_sections: false
   sections:
     - title: Arithmetic - blah
-      url: /a1
+      url: /pages/arithmetic
     - title: Variables
-      url: /a2
+      url: /pages/arithmetic
     - title: Basic Data Types
-      url: /a3
+      url: /pages/arithmetic
       expand_subsections: false
       subsections:
       - title: Integers
-        url: /a5
+        url: /pages/strings
       - title: Floats
-        url: /a6
+        url: /pages/strings
       - title: Strings
-        url: /a7
+        url: /pages/strings
       - title: Boolean Values
-        url: /a8
+        url: /pages/booleans
     - title: Data Structures
-      url: /a4
+      url: /pages/lists
+      expand_subsections: false
       subsections:
-      #expand_sections: false
       - title: Lists
-        url: /a9
+        url: /pages/more_lists
       - title: Tuples
-        url: /a10
+        url: /pages/more_lists
       - title: Dictionaries
-        url: /a11
+        url: /pages/more_lists
       - title: Collections
-        url: /a12
+        url: /pages/more_lists
 
 - title: Control Flow
   url: /features/notebooks
   sections:
     - title: For Loops
-      url: /features/features4
+      url: /pages/for_loops
     - title: If Statements
-      url: /features/features5
+      url: /pages/for_loops
     - title: While Loops
-      url: /features/features6
+      url: /pages/for_loops
 
 - divider: true
 
 - title: "Appendix: Vector Space Review"
-  url: /ch/19/vector_space_review
+  #url: /ch/19/vector_space_review
   not_numbered: true
 
 - title: "Appendix: Reference Tables"
-  url: /ch/20/ref_intro
+  #url: /ch/20/ref_intro
   not_numbered: true
   sections:
     - title: pandas
-      url: /ch/20/ref_pandas
+      #url: /ch/20/ref_pandas
     - title: seaborn
-      url: /ch/20/ref_seaborn
+      #url: /ch/20/ref_seaborn
     - title: matplotlib
-      url: /ch/20/ref_matplotlib
+      #url: /ch/20/ref_matplotlib
     - title: scikit-learn
-      url: /ch/20/ref_sklearn
+      #url: /ch/20/ref_sklearn
 
 - title: "Appendix: Contributors"
-  url: /ch/21/contributors
+  #url: /ch/21/contributors
   not_numbered: true
