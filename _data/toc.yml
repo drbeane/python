@@ -59,16 +59,26 @@
       url: /a2
     - title: Basic Data Types
       url: /a3
+      subsections:
+      - title: Integers
+        url: /a5
+      - title: Floats
+        url: /a6
+      - title: Strings
+        url: /a7
+      - title: Boolean Values
+        url: /a8
     - title: Data Structures
       url: /a4
       subsections:
       - title: Lists
-        url: /a5
+        url: /a9
       - title: Tuples
-        url: /a6
+        url: /a10
       - title: Dictionaries
-        url: /a7
+        url: /a11
       - title: Collections
+        url: /a12
 
 - title: Control Flow
   url: /features/notebooks
