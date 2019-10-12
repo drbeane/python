@@ -98,6 +98,7 @@
 
 -title: Functions
     sections:
+    url: /features/markdown
         -title: Defining Functions
         -title: Parameters and Arguments
 
