@@ -10,7 +10,7 @@
  * [5]: The logo displayed above the sidebar
  * [6]: The footer at the bottom of the sidebar
  */
-$color-sidebar-bg: rgba(12, 115, 55, 0);
+$color-sidebar-bg: rgba(255, 255, 255, 0) !default;
 $color-sidebar-entry: #364149 !default;
 $color-sidebar-entry--active: $color-links !default;
 $color-sidebar-divider: #bbb !default;
