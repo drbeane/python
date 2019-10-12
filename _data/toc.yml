@@ -88,10 +88,18 @@
   sections:
     - title: For Loops
       url: /pages/for_loops
+    - title: List Comprehensions
     - title: If Statements
       url: /pages/for_loops
     - title: While Loops
       url: /pages/for_loops
+    - title: Break and Continue
+    - title: Error Handling
+
+-title: Functions
+    sections:
+        -title: Defining Functions
+        -title: Parameters and Arguments
 
 - divider: true
 
