@@ -105,6 +105,119 @@
       - title: Scope
       - title: Lambda Functions
 
+- title: Packages
+  sections:
+      - title: Importing Packages
+      - title: Namespaces and Aliases
+      - title: Math Package
+      - title: Random Package
+
+- title: Classes
+  sections:
+      - title: Defining Classes
+      - title: Attributes and Methods
+      - title: Constructors
+
+- header: Working with Data
+
+- title: Numpy
+  sections:
+      - title: Numpy Arrays
+      - title: Array Operations
+      - title: Array Comparisons
+      - title: Boolean Masking
+      - title: Fancy Indexing
+      - title: Random Number Generation
+      - title: Multidimensional Arrays
+      - title: Additional Tools
+
+- title: Pandas
+  sections:
+      - title: Data Frames
+      - title: Working with Columns
+
+- header: Data Visualization
+
+- title: Matplotlib
+  sections:
+      - title: blah
+      - title: foo
+
+- title: Seaborn
+  sections:
+      - title: blah
+      - title: foo
+
+- title: Plotly
+  sections:
+      - title: blah
+      - title: foo
+
+- title: That Other One
+  sections:
+      - title: blah
+      - title: foo
+
+- header: Machine Learning
+
+- title: Introduction to Machine Learning
+  sections:
+      - title: blah
+      - title: foo
+
+- title: Supervised Learning
+  sections:
+      - title: Linear Regression
+      - title: Logistic Regression
+      - title: Classification Metrics
+      - title: K-Nearest  Neighbors
+      - title: Decision Trees
+      - title: Support Vector Machines
+      - title: Feature Scaling
+      - title: Regularization
+      - title: Cross Validation
+
+- title: Unsupervised Learning
+  sections:
+      - title: Principal Components Analysis
+      - title: K-Means Clustering
+      - title: Hierarchical Clustering
+
+- title: Reincorment Learning
+  sections:
+      - title: Blah
+      - title: Foo
+
+- header: Deep Learning
+
+- title: Artificial Neural Networks
+  sections:
+      - title: The Artificial Neuron
+      - title: ANN Architecture
+      - title: Backpropagation
+      - title: Regularization
+      - title: Activation Functions
+
+- title: Convolutional Neural Networks
+  sections:
+      - title: CNN Architecture
+      - title: Training on a GPU
+      - title: Data Generators
+      - title: Data Augmentation
+      - title: Transfer Learning
+
+- title: Recurrent Neural Networks
+  sections:
+      - title: Basic RNN
+      - title: LSTM
+      - title: Sentiment Analysis
+      - title: Word Embeddings
+      - title: Time Series
+
+- title: Generative Models
+  sections:
+      - title: Text Generation
+      - title: Style Transfer
 
 - divider: true
 
