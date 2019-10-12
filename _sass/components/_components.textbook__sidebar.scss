@@ -19,7 +19,7 @@ $color-sidebar-divider: #bbb !default;
   background-color: $color-sidebar-bg;
   padding: $spacing-unit-small;
 
-  @include inuit-font-size(12px);
+  @include inuit-font-size(14px);
   border-right: 1px solid rgba(0, 0, 0, 0.07);
   opacity: 0.6;
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -38,7 +38,8 @@ $color-sidebar-divider: #bbb !default;
 }
 
 li.c-sidebar__chapter > a {
-  font-size: 2.4em;
+  font-size: 1.2em;
+  margin-bottom: 0;
 }
 
 /* [1] */
