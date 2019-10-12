@@ -1,0 +1,96 @@
+# This file contains the order and numbering for all sections in the book.
+#
+# It is a sample TOC file to help you get started. Fill it out with entries
+# for your own content.
+#
+# Each entry has the following schema:
+#
+# - title: mytitle   # Title of chapter or section
+#   url: /myurl  # URL of section relative to the /content/ folder.
+#   sections:  # Contains a list of more entries that make up the chapter's sections
+#   not_numbered: true  # if the section shouldn't have a number in the sidebar
+#     (e.g. Introduction or appendices)
+#   expand_sections: true  # if you'd like the sections of this chapter to always
+#     be expanded in the sidebar.
+#   external: true  # Whether the URL is an external link or points to content in the book
+#   no_link: true  # If true, only text is rendered instead of a link. Used for in-progress sections.
+#
+# Below are some special values that trigger specific behavior:
+# - search: true  # Will provide a link to a search page
+# - divider: true  # Will insert a divider in the sidebar
+# - header: My Header  # Will insert a header with no link in the sidebar
+#
+# See the links below for an example.
+
+# Top-level page
+- title: Data 100 Homepage
+  url: http://ds100.org/
+  not_numbered: true
+  external: true
+  # Hard-coded redirects used to avoid breaking links when modifying the book.
+  # Each redirect needs a `from` and `to` key. Redirects can technically get
+  # placed in any chapter but we'll keep them all here for simplicity.
+  redirects:
+    - from: ch/05/eda_intro
+      to: ch/04/eda_intro
+    - from: ch/04/cleaning_intro
+      to: ch/05/cleaning_intro
+
+- title: Search This Book
+  search: true
+  not_numbered: true
+
+- divider: true
+
+- title: Introduction
+  url: /intro
+  not_numbered: true
+
+- title: About This Book
+  url: /about_this_book
+  not_numbered: true
+
+- divider: true
+
+- title: Python Basics
+  url: /features/features
+  sections:
+    - title: Arithmetic
+      url: /features/features1
+    - title: Variables
+      url: /features/features2
+    - title: Data Types
+      url: /features/features3
+
+- title: Control Flow
+  url: /features/notebooks
+  sections:
+    - title: For Loops
+      url: /features/features4
+    - title: If Statements
+      url: /features/features5
+    - title: While Loops
+      url: /features/features6
+
+- divider: true
+
+- title: "Appendix: Vector Space Review"
+  url: /ch/19/vector_space_review
+  not_numbered: true
+
+- title: "Appendix: Reference Tables"
+  url: /ch/20/ref_intro
+  not_numbered: true
+  sections:
+    - title: pandas
+      url: /ch/20/ref_pandas
+    - title: seaborn
+      url: /ch/20/ref_seaborn
+    - title: matplotlib
+      url: /ch/20/ref_matplotlib
+    - title: scikit-learn
+      url: /ch/20/ref_sklearn
+
+- title: "Appendix: Contributors"
+  url: /ch/21/contributors
+  not_numbered: true
