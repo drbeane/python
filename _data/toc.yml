@@ -54,13 +54,20 @@
   url: /features/features
   sections:
     - title: Arithmetic
+      url: /a1
     - title: Variables
+      url: /a2
     - title: Basic Data Types
+      url: /a3
     - title: Data Structures
+      url: /a4
       subsections:
       - title: Lists
+        url: /a5
       - title: Tuples
+        url: /a6
       - title: Dictionaries
+        url: /a7
       - title: Collections
 
 - title: Control Flow
