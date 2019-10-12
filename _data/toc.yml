@@ -96,6 +96,11 @@
     - title: Break and Continue
     - title: Error Handling
 
+- title: Functions
+  url: /features/markdown
+  sections:
+    -title: Defining Functions
+    -title: Parameters and Arguments
 
 
 - divider: true
