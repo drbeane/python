@@ -19,6 +19,8 @@ Here are a few features of Jupyter Books
 
 ## Getting started
 
+* **[Temp](pages/temp)**
+
 To get started, you may be interested in the following links.
 Here are a few links of interest:
 
