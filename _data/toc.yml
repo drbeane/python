@@ -104,6 +104,7 @@
       - title: Return Values
       - title: Scope
       - title: Lambda Functions
+      - title: Recursion
 
 - title: Packages
   sections:
