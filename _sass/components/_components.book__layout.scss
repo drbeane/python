@@ -91,8 +91,8 @@ $topbar-height: 60px;
 }
 
 .c-sidebar__title {
-  //color: #cccccc;
-  color: #f37726;
+  color: #cccccc;
+  //color: #f37726;
   font-size: 1.2em;
   //margin-top: 10px;
   //margin-bottom: 10px;
@@ -110,7 +110,7 @@ $topbar-height: 60px;
   /*padding: $spacing-unit-tiny;*/
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 20;
+  padding: 0px;
   //color: $color-sidebar-entry;
   //text-decoration: none;
 }
@@ -120,7 +120,13 @@ $topbar-height: 60px;
   margin-left: 0;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 20px;
+  padding: 0px;
+
+  &:hover {
+    text-decoration: underline;
+    color: #f37726;
+  }
+
 }
 
 li.c-sidebar__chapter > a {
