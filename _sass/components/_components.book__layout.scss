@@ -91,14 +91,18 @@ $topbar-height: 60px;
 }
 
 .c-sidebar__title {
-  color: #cccccc;
-  //color: #f37726;
+  //color: #cccccc;
+  color: #f37726;
   font-size: 1.2em;
   //margin-top: 10px;
   //margin-bottom: 10px;
   margin-top: 4px;
   margin-bottom: 2px;
   padding: 0px;
+}
+
+.c-sidebar__entry--active.c-sidebar__entry--active {
+  color: #f37726;
 }
 
 .c-sidebar__entry_old {
@@ -116,7 +120,7 @@ $topbar-height: 60px;
   margin-left: 0;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 0px;
+  padding: 20px;
 }
 
 li.c-sidebar__chapter > a {
