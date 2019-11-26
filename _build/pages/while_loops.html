@@ -1,0 +1,655 @@
+---
+redirect_from:
+  - "/pages/while-loops"
+interact_link: content/pages/while_loops.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  While Loops
+pagenum: 19
+prev_page:
+  url: /pages/if_statements.html
+next_page:
+  url: /pages/breaks_continue.html
+suffix: .ipynb
+search: while loop loops input x user times font executes size our following python execute counter want print color orangered exercise variable loan monthly method name technique square k n chapter datacamp intermediate data science task follows range value within given condition true not should example lets less create typically assume payments end month balance programs code finding approximate process guess estimate frac cdot continue root lesson topics discussed notebook reading additional resources crash course www com courses similar tool used automate repetive core difference between predetermined begins b exactly once falls supplied depending nature necessarily ahead basic level behave similarly
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">While Loops</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-08---While-Loops">Lesson 08 - While Loops<a class="anchor-link" href="#Lesson-08---While-Loops"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li><code>while</code> loops</li>
+<li>Reading user input</li>
+</ul>
+<h3 id="Additional-Resources">Additional Resources<a class="anchor-link" href="#Additional-Resources"> </a></h3><ul>
+<li>Chapter 07 of <strong>Python Crash Course</strong>.</li>
+<li><a href="https://www.datacamp.com/courses/intermediate-python-for-data-science">DataCamp: Intermediate Python for Data Science, Chapter 4</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="While-Loops">While Loops<a class="anchor-link" href="#While-Loops"> </a></h2><p>A <code>while</code> loop is similar to a <code>for</code> loop in that it is a tool used to automate a repetive task. The core difference between <code>while</code> and <code>for</code> loops is as follows:</p>
+<ul>
+<li>A <code>for</code> loop executes a predetermined number of times. A <code>for</code> loop that begins with <strong><code>"for i in range(a,b)"</code></strong> will execute exactly once for each value of the counter <code>i</code> that falls within the given range. </li>
+<li>A <code>while</code> loop executes as long as some supplied condition is true. Depending on the nature of this condition, we do not necessarily know ahead of time how many times the loop will execute. </li>
+</ul>
+<p>At a basic level, <code>for</code> loops and <code>while</code> loops behave similarly, as shown by the following examples.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The task above could have been accomplished more succintly using a <code>for</code> loop:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The usefulnes of <code>while</code> loops arises from sitautions in which we aren't sure how many times the loop should execute.</p>
+<p>As a simple example, lets say that we want to print out all perfect squares less than 1000.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+121
+144
+169
+196
+225
+256
+289
+324
+361
+400
+441
+484
+529
+576
+625
+676
+729
+784
+841
+900
+961
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color="orangered" size="5">� Exercise</font></strong></p>
+<p>Find the largest power of 2 less than 10,000. Print this number.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span><span class="mi">1</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8192
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will occasionally want to create a variable to count the number of times that a while loop executes. Such a variable is typically referred to as a <strong>counter</strong>. A counter should typically be initialized to 0, and incremented each time the loop executes.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color="orangered" size="5">� Exercise</font></strong></p>
+<p>Assume that a loan of \$225,000 is being repaid with monthly payments of \\$850, which occur at the end of the month. The loan is collecting interest at a monthly rate of 0.4%. So, at the end of each month, the remaining balance wil be multiplied by 1.003, and then \$850 is deducted from this balance. Determine the number of monthly payments required to fully repay the loan.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">balance</span> <span class="o">=</span> <span class="mi">225000</span>
+<span class="n">rate</span> <span class="o">=</span> <span class="mf">0.003</span>
+<span class="n">pmt</span> <span class="o">=</span> <span class="mi">850</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="p">)</span> <span class="o">-</span> <span class="n">pmt</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>528
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Find the size of the final payment.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">balance</span> <span class="o">+</span> <span class="n">pmt</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>515.932909740989
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="User-Input">User Input<a class="anchor-link" href="#User-Input"> </a></h2><p>Programs often require input from the user. Python's <code>input()</code> function provides a method of prompting the user for input. For example, consider the following code:</p>
+
+<pre><code>name = input("What is your name? ")
+
+</code></pre>
+<p>This code will print the string, "What is your name? " and will then wait for user input. The value entered by the user will then be stored in the variable <code>myVar</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is your name? Robbie
+Hello, Robbie!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>User input can be combined with <code>while</code> loops to create interactive programs.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I have selected a random number between 0 and 999, inclusive. Can you guess it?&quot;</span><span class="p">)</span>
+
+<span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">done</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+    
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter guess number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span><span class="p">))</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your guess was too small.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">guess</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your guess was too large.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s it! It took you &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; guesses to find the right answer.&quot;</span><span class="p">)</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+        
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I have selected a random number between 0 and 999, inclusive. Can you guess it?
+Please enter guess number 1: 500
+Your guess was too small.
+Please enter guess number 2: 750
+Your guess was too small.
+Please enter guess number 3: 875
+Your guess was too small.
+Please enter guess number 4: 937
+Your guess was too large.
+Please enter guess number 5: 906
+Your guess was too small.
+Please enter guess number 6: 922
+Your guess was too small.
+Please enter guess number 7: 930
+Your guess was too large.
+Please enter guess number 8: 926
+Your guess was too small.
+Please enter guess number 9: 928
+That&#39;s it! It took you 9 guesses to find the right answer.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><font color="orangered" size="5">� Exercise</font></strong></p>
+<p>Newton's Method is a calculus-based technique for finding approximate solutions to mathematical equations. We will not discuss the details of Netwon's Method here, but one application of this technique is finding square roots of numbers. The process works as follows:</p>
+<ul>
+<li>Assume that we want to calculuate $\sqrt K$.</li>
+<li>We start by making an initial guess, that we will denote by $x_1$. </li>
+<li>We can improve our estimate by calculating $x_2 = x_1 - \frac{x_1^2 - K}{2 \cdot x_1}$</li>
+<li>We can continue to make impovements by continuing this process.</li>
+<li>In general, our nth guess is given by: $x_n = x_{n-1} - \frac{x_{n-1}^2 - K}{2 \cdot x_{n-1}}$</li>
+</ul>
+<p>Apply this technique 10 times to approximate the square root of 734,123,454,324.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># K is the number whe want to take the square root of.</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">734123454324</span>
+
+<span class="c1"># x will be equal to our first guess</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># We will create a loop that runs 10 times, improving our guess each time.</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">K</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>143385193.8336325
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It tuns out that the true square root of 734,123,454,324 is approximately 856,810.0457. Our approximation is way off. We didn't let the algorithm run enough times.</p>
+<p>Let's try again with a <code>while</code> loop. We will continue to make improvements on our estimate until two consecutive estimates are within 1/1000 of each other.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># K is the number whe want to take the square root of.</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">734123454324</span>
+
+<span class="c1"># x will be equal to our first guess</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># We create a flag that tells us when to stop</span>
+<span class="n">keep_going</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="c1"># We will create a loop that runs 10 times, improving our guess each time.</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">keep_going</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">x_old</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">K</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+        
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">x_old</span> <span class="o">-</span> <span class="n">x</span>
+        
+        <span class="c1"># We need to take the absolute value of diff</span>
+        <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="o">-</span><span class="n">diff</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">diff</span> <span class="o">&lt;</span> <span class="mf">0.001</span><span class="p">):</span>
+            <span class="n">keep_going</span> <span class="o">=</span> <span class="kc">False</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>856810.0456483923
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

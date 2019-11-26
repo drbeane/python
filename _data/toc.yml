@@ -23,7 +23,7 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Introduction--
+- title: Introduction
   url: /intro
   not_numbered: true
   external: false
@@ -89,12 +89,15 @@
     - title: For Loops
       url: /pages/for_loops
     - title: List Comprehensions
+      url: /pages/list_comprehensions
     - title: If Statements
-      url: /pages/for_loops
+      url: /pages/if_statements
     - title: While Loops
-      url: /pages/for_loops
+      url: /pages/while_loops
     - title: Break and Continue
+      url: /pages/breaks_continue
     - title: Error Handling
+      url: /pages/error_handling
 
 - title: Functions
   url: /features/markdown
