@@ -54,12 +54,13 @@
   url: /features/features
   expand_sections: false
   sections:
-    - title: Arithmetic
+    - title: Arithmetic11
       url: /pages/arithmetic
     - title: Variables
       url: /pages/arithmetic
     - title: Basic Data Types
       url: /pages/arithmetic
+      expand_subsections: false
       subsections:
       - title: Integers
         url: /pages/strings
@@ -71,6 +72,7 @@
         url: /pages/booleans
     - title: Data Structures
       url: /pages/lists
+      expand_subsections: false
       subsections:
       - title: Lists
         url: /pages/more_lists
