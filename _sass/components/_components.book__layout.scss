@@ -125,8 +125,8 @@ $topbar-height: 60px;
 }
 
 li.c-sidebar__chapter {
-  //font-size: 1.0em;
-  font-size: 11px;
+  font-size: 1.0em;
+  //font-size: 11px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
@@ -252,11 +252,11 @@ li.c-sidebar__subsection > a{
 // Scrollbar width
 ::-webkit-scrollbar {
   width: 5px;
-  background: #a55a55;
+  background: #f1f1f1;;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a55a55;
+  background: #c1c1c1;;
 }
 
 main, nav {
