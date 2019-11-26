@@ -126,11 +126,15 @@ $topbar-height: 60px;
 
 li.c-sidebar__chapter {
   //font-size: 1.0em;
-  font-size: 11px;
+  font-size: 32px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
 
+  &:active {
+    text-decoration: underline;
+    color: #f37726;
+  }
 }
 
 li.c-sidebar__chapter > a{
@@ -149,8 +153,6 @@ li.c-sidebar__chapter > a{
     text-decoration: underline;
     color: #f37726;
   }
-
-
 }
 
 .c-sidebar__sections {
