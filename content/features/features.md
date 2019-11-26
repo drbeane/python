@@ -1,6 +1,6 @@
 # Features
 
-Blah blah.
+Blah blah blah.
 
 This is a short demonstration textbook to show the general layout / style of textbooks built
 with Jupyter and Jekyll. The markdown files for *this* page (and others in the textbook) is generated from the notebooks
