@@ -55,7 +55,7 @@ $topbar-height: 60px;
   }
 }
 
-.c-textbook__sidebar,
+.c-textbook__sidebar_old,
 .c-textbook__page {
   /* [2] */
   height: 100vh;
@@ -64,7 +64,7 @@ $topbar-height: 60px;
   background-color: $book-background-color; /* [3] */
 }
 
-.c-textbook__sidebar {
+.c-textbook__sidebar_old {
   //background-color: #ecf5fe;
   width: $left-sidebar-width;
   top: 0;
@@ -74,7 +74,8 @@ $topbar-height: 60px;
 .c-textbook__sidebar_new {
   /*background-color: $color-sidebar-bg;*/
   background-color: #fcd116;
-  width: $left-sidebar-width;
+  //width: $left-sidebar-width;
+  width: 600px;
   padding: $spacing-unit-small;
   height: 100vh;
   overflow: auto;
