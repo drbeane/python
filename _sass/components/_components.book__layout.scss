@@ -83,7 +83,7 @@ $topbar-height: 60px;
   left: 0;
 }
 
-.js-sidebar {
+#js-sidebar {
   /*background-color: $color-sidebar-bg;*/
   background-color: #fcd116;
   width: $left-sidebar-width;
@@ -120,7 +120,7 @@ $topbar-height: 60px;
   }
 }
 
-#sidebar__right {
+.sidebar__right {
   // By default we hide the sidebar
   display: none;
 
