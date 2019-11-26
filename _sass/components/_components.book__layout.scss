@@ -71,7 +71,7 @@ $topbar-height: 60px;
   left: 0;
 }
 
-.c-textbook__sidebar {
+.c-textbook__sidebar_junk {
   /*background-color: $color-sidebar-bg;*/
   background-color: #fcd116;
   width: $left-sidebar-width;
@@ -85,8 +85,9 @@ $topbar-height: 60px;
 
 #js-sidebar {
   /*background-color: $color-sidebar-bg;*/
-  background-color: #fcd116;
+  background-color: #ecf5fe;
   width: $left-sidebar-width;
+  opacity: 1
   //padding: $spacing-unit-small;
   height: 100vh;
   overflow: auto;
