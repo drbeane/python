@@ -121,6 +121,13 @@ li.c-sidebar__subsection {
   margin-bottom: 2px;
 }
 
+.c-sidebar__entry {
+  display: block;
+  /*padding: $spacing-unit-tiny;*/
+  padding: 0;
+  color: $color-sidebar-entry;
+  text-decoration: none
+}
 
 //---------------------------------------------
 
