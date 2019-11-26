@@ -138,13 +138,13 @@ li.c-sidebar__chapter {
 }
 
 li.c-sidebar__chapter > a{
-  font-weight: bold;
+  //font-weight: bold;
   margin-left: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
 
-  &:active {
+  &:visited {
     text-decoration: underline;
     color: #f37726;
   }
@@ -171,6 +171,12 @@ li.c-sidebar__section > a{
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
+  
+  &:visited {
+    text-decoration: underline;
+    color: #f37726;
+  }
+
 }
 
 li.c-sidebar__subsection > a{
