@@ -115,9 +115,18 @@ $topbar-height: 60px;
   //text-decoration: none;
 }
 
-.c-sidebar__chapters {
+.c-sidebar__chapters {   //Operates on entire list of chapters
   list-style: none;
   margin-left: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+li.c-sidebar__chapter > a {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 10px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
@@ -127,15 +136,7 @@ $topbar-height: 60px;
     color: #f37726;
   }
 
-}
 
-li.c-sidebar__chapter > a {
-  font-size: 1.0em;
-  font-weight: bold;
-  margin-left: 6px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
 }
 
 .c-sidebar__sections {
