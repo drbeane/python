@@ -1,0 +1,329 @@
+---
+interact_link: content/pages/packages.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Packages
+pagenum: 29
+prev_page:
+  url: /pages/recursion.html
+next_page:
+  url: /pages/importing_packages.html
+suffix: .ipynb
+search: package import namespace object functions name using python packagename packages following into math returns argument data command naming us conflicts base several contains factorial alias objects datacamp intro science set contents every importing might previously its syntax objectname includes mathematical value specified also pi want allows main lesson topics discussed notebook additional resources ch www com courses pre built types loaded session extend languages functionality namespaces create new effectively system helps avoid dont always names situations where defined default same access operations common missing included along others sqrt square root exp e raised natural logarithm optional parameter change variables example
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Packages</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-12---Packages">Lesson 12 - Packages<a class="anchor-link" href="#Lesson-12---Packages"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li>Using packages</li>
+</ul>
+<h3 id="Additional-Resources">Additional Resources<a class="anchor-link" href="#Additional-Resources"> </a></h3><ul>
+<li><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">DataCamp: Intro to Python for Data Science, Ch 4</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Packages">Packages<a class="anchor-link" href="#Packages"> </a></h2><p>A <strong>package</strong> is a pre-built set of functions and data types that can be loaded into a Python session to extend the language's functionality.</p>
+<p>We can import a package using the command <code>import package_name</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Namespaces">Namespaces<a class="anchor-link" href="#Namespaces"> </a></h2><p>When we import a package, we create a new <strong>namespace</strong> for the contents of that package. A namespace is effectively a naming system that helps us to avoid naming conflicts. We don't always know the names of every object in a package that we are importing, and there might be situations where an object in a package has a name that conflicts with an object we have previously defined. By default, the name of a namespace for a package is the same as the name of the package, and we access its contents using the following syntax:</p>
+
+<pre><code>package_name.object_name</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-math-Package">The <code>math</code> Package<a class="anchor-link" href="#The-math-Package"> </a></h2><p>Base Python includes many mathematical functions and operations, but there are several common mathematical functions that are missing. Several of these are included in the <code>math</code> package.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>math</code> packages contains functions the following functions (along with many others):</p>
+<ul>
+<li><strong><code>sqrt()</code></strong>  - Returns the square root of the argument. </li>
+<li><strong><code>factorial()</code></strong> - Returns the factorial of the argument.</li>
+<li><strong><code>exp()</code></strong> - Returns the value of <code>e</code> raised to the argument.</li>
+<li><strong><code>factorial()</code></strong> - Returns the natural logarithm of the argument. An optional <code>base</code> parameter can be specified to change the base. </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Square root of 20: &#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;10 factorial:      &#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;e raised to 5:     &#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Natural log of 100:&#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Common log of 100: &#39;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>math</code> package also contains variables. For example, it contains an object named <code>pi</code> which stores the value of the constant <code>pi</code>. This package also includes trig functions such as <code>sin</code>, <code>cos</code>, and <code>tan</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Aliases">Using Aliases<a class="anchor-link" href="#Using-Aliases"> </a></h2><p>If we are making frequent use of a certain package, it can b tedius to type its name every time you want to use an object from the package, especially if the name of the package is long. Python allows us to set an <strong>alias</strong> for a package when we import it. Setting an alias allows us to choose the name of the namespace associate with the package. The syntax for this is:</p>
+
+<pre><code>import package_name as alias</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">mt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">mt</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Importing-into-the-Main-Namespace">Importing into the Main Namespace<a class="anchor-link" href="#Importing-into-the-Main-Namespace"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we have an object that we know we will be using frequently, we can import it directly into the main namespace as follows:</p>
+
+<pre><code>from package_name import object_name
+
+</code></pre>
+<p>Note that this only imports the specified object. Nothing else from the package is imported.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can import several objects with a single import statement.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we want to import all objects from a package into the primary namespace, we can do so with the following command:</p>
+
+<pre><code>from package_name import *
+
+</code></pre>
+<p>Be careful with this command. If there are any naming conflicts, objects that had been created previously might be over-written.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

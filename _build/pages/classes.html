@@ -1,0 +1,949 @@
+---
+interact_link: content/pages/classes.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Classes
+pagenum: 34
+prev_page:
+  url: /pages/random_package.html
+next_page:
+  url: /pages/defining_classes.html
+suffix: .ipynb
+search: class instance instances attributes methods method create classes type called rectangle not new contain cell created always constructors coordinates does object certain single values value multiple set variable existing constuctor alter able lesson following topics discussed notebook programmer defined data variables next cornerbl cornerur bottom left upper right above actually just defines structure later objects might several same below explore aspects changing attribute change although often advisable mentioned previously equal version simply points already recall lists exhibit similar behavior function associated using particular provided argument calling access only within also special automatically allow us python named init passing arguments take
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Classes</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-20---Classes">Lesson 20 - Classes<a class="anchor-link" href="#Lesson-20---Classes"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li>Classes and instances. </li>
+<li>Attributes and methods.</li>
+<li>Constructors</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Classes">Classes<a class="anchor-link" href="#Classes"> </a></h3><p>A <strong>class</strong> is a programmer-defined data type. Classes can contain variables, which are called <strong>attributes</strong>.</p>
+<p>In the next cell, we will create a class called <code>Rectangle</code>. It will contain two attributes, <code>corner_bl</code> and <code>corner_ur</code>, which which contain the coordinates of the bottom-left and upper-right coordinates of a rectangle.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 1</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v1</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Instances">Instances<a class="anchor-link" href="#Instances"> </a></h3><p>The cell above does not actually create an object of the type <code>Rectangle</code>. It just defines the structure for later objects that we might create with this type. An object that is created with a certain class type is said to be an <strong>instance</strong> of that class. We may have several instances of the same class.</p>
+<p>In the cell below, we will create a single instance of the <code>Rectangle</code> class. We will then explore some aspects of this class.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v1</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">rect1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;__main__.Rectangle_v1&#39;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3]
+[5, 6]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Changing-Attribute-Values">Changing Attribute Values<a class="anchor-link" href="#Changing-Attribute-Values"> </a></h3><p>We can change the value of class attributes (although this is often not advisable to do so).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 3]
+[3, 8]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Multiple-Instances">Multiple Instances<a class="anchor-link" href="#Multiple-Instances"> </a></h3><p>As mentioned previously, we can have multiple instances of a single class.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect2</span> <span class="o">=</span> <span class="n">Rectangle_v1</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect2 corners:&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [1, 3] and [3, 8]
+rect2 corners: [1, 3] and [5, 6]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we set a variable to be equal to an existing instance of a class, it does not create a new version of that class. Instance, the new variable simply points to the already existing instance. Recall that lists exhibit a similar behavior.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect3</span> <span class="o">=</span> <span class="n">rect1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect2 corners:&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect3 corners:&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [1, 3] and [3, 8]
+rect2 corners: [1, 3] and [5, 6]
+rect3 corners: [1, 3] and [3, 8]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect2 corners:&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect3 corners:&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [2, 4] and [3, 8]
+rect2 corners: [1, 3] and [5, 6]
+rect3 corners: [2, 4] and [3, 8]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Methods">Methods<a class="anchor-link" href="#Methods"> </a></h3><p>A <strong>method</strong> is a function that is associated with a certain class. A method is always called by using a particular instance of the class, and that instance is always provided to the method as an argument.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 2</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v2</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v2</span><span class="p">()</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 width:  &#39;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 height: &#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [1, 3] and [5, 6]
+rect1 width:   4
+rect1 height:  3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 width:  &#39;</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 height: &#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [4, 1] and [9, 2]
+rect1 width:   5
+rect1 height:  1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Methods-Calling-Methods">Methods Calling Methods<a class="anchor-link" href="#Methods-Calling-Methods"> </a></h3><p>A method in a class has access not only to the attributes within that class, but also the other methods.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 3</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v3</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">w</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v3</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 width:  &#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_width</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 height: &#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_height</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 area:   &#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_area</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [1, 3] and [5, 6]
+rect1 width:   4
+rect1 height:  3
+rect1 area:    12
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Constructors">Constructors<a class="anchor-link" href="#Constructors"> </a></h3><p>A <strong>constuctor</strong> is a special method that is called automatically when an instance of a class is created. This can allow us to set the values of class attributes when the instance is created. The constuctor of a class in Python is always named <code>__init__()</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 4</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v4</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="c1">#corner_bl = [1,3]</span>
+    <span class="c1">#corner_ur = [5,6]  </span>
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner_bl</span><span class="p">,</span> <span class="n">corner_ur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="n">corner_bl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="n">corner_ur</span>
+    
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">w</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v4</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">rect2</span> <span class="o">=</span> <span class="n">Rectangle_v4</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 area:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">get_area</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect2 area:&#39;</span><span class="p">,</span> <span class="n">rect2</span><span class="o">.</span><span class="n">get_area</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 area: 15
+rect2 area: 7
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Methods-Can-Alter-Attributes">Methods Can Alter Attributes<a class="anchor-link" href="#Methods-Can-Alter-Attributes"> </a></h3><p>Class methods are able to alter the value of the attributes of that class.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 5</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v5</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner_bl</span><span class="p">,</span> <span class="n">corner_ur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="n">corner_bl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="n">corner_ur</span>
+    
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">w</span>
+    
+    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dw</span><span class="p">,</span> <span class="n">dh</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dh</span>
+        <span class="k">return</span> <span class="bp">self</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v5</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">rect1</span><span class="o">.</span><span class="n">grow</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect1 corners:&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect1</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect1 corners: [0, 0] and [9, 5]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Passing-Instances-as-Arguments">Passing Instances as Arguments<a class="anchor-link" href="#Passing-Instances-as-Arguments"> </a></h3><p>A class method is able to take instances of that class as parameters.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 6</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v6</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner_bl</span><span class="p">,</span> <span class="n">corner_ur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="n">corner_bl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="n">corner_ur</span>
+    
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">w</span>
+    
+    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dw</span><span class="p">,</span> <span class="n">dh</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dh</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="nf">is_smaller</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_area</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">get_area</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v6</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">rect2</span> <span class="o">=</span> <span class="n">Rectangle_v6</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">is_smaller</span><span class="p">(</span><span class="n">rect2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v6</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">rect2</span> <span class="o">=</span> <span class="n">Rectangle_v6</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rect1</span><span class="o">.</span><span class="n">is_smaller</span><span class="p">(</span><span class="n">rect2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Returning-New-Instances">Returning New Instances<a class="anchor-link" href="#Returning-New-Instances"> </a></h3><p>It is possible for a class method to create and return a new instance of the class itself.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Version 7</span>
+
+<span class="k">class</span> <span class="nc">Rectangle_v7</span><span class="p">:</span>  
+    <span class="c1"># Attributes</span>
+    <span class="n">corner_bl</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">corner_ur</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>  
+    
+    <span class="c1"># Methods</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner_bl</span><span class="p">,</span> <span class="n">corner_ur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span> <span class="o">=</span> <span class="n">corner_bl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span> <span class="o">=</span> <span class="n">corner_ur</span>
+    
+    <span class="k">def</span> <span class="nf">get_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">get_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">w</span>
+    
+    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dw</span><span class="p">,</span> <span class="n">dh</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dh</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    
+    <span class="k">def</span> <span class="nf">is_smaller</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_area</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">get_area</span><span class="p">()):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">def</span> <span class="nf">intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">y2</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">other</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">new_rect</span> <span class="o">=</span> <span class="n">Rectangle_v7</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">],</span> <span class="p">[</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">new_rect</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rect1</span> <span class="o">=</span> <span class="n">Rectangle_v7</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">rect2</span> <span class="o">=</span> <span class="n">Rectangle_v7</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="n">rect3</span> <span class="o">=</span> <span class="n">rect1</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">rect2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rect3 corners:&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_bl</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">rect3</span><span class="o">.</span><span class="n">corner_ur</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>rect3 corners: [2, 2] and [1, 1]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

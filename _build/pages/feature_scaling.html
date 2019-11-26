@@ -1,0 +1,2303 @@
+---
+redirect_from:
+  - "/pages/feature-scaling"
+interact_link: content/pages/feature_scaling.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Feature Scaling
+pagenum: 72
+prev_page:
+  url: /pages/svm.html
+next_page:
+  url: /pages/regularization.html
+suffix: .ipynb
+search: set scaling feature encoding using categorical x variable model features perform data numerical example min scaled values value max training scaler encoded three fit test levels observations standard variables not create sex dataset columns method our dataframe apply object its supervised learning class suppose let validation passenger following assume models wish must dummy z below process scale labels level sklearn contains step encoder transform since refer original train age split preprocessing information encode new particular emp reg cell instance does actually simply learns array order next same observation creating mean deviation used need titanic indicating qualitative such also typically any
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Feature Scaling</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-23---Data-Preprocessing">Lesson 23 - Data Preprocessing<a class="anchor-link" href="#Lesson-23---Data-Preprocessing"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li>One-Hot Encoding of Categorical Variables</li>
+<li>Feature Scaling</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Categorical-Predictors">Categorical Predictors<a class="anchor-link" href="#Categorical-Predictors"> </a></h2><p>A variable is <strong>categorical</strong>, or <strong>qualitative</strong> if it takes on values from a finite set of categories or classes. Such values are often recorded as strings, but might also be encoded using numerical labels. Such numerical labels do not typically have any numerical or quantitative significance.The possible values that a categorical variable can assume are referred to as its <strong>levels</strong>.</p>
+<h2 id="One-Hot-Encoding">One-Hot Encoding<a class="anchor-link" href="#One-Hot-Encoding"> </a></h2><p>The Scikit-Learn implementations of supervised learning models require all of the feature information to be provided in a numerical format. If we wish to use a categorical variable as a feature in a Scikit-Learn model, we can do so, but we must first find a way to numerically encode the variable. The most common technique for numerically encoding qualitative information is to use <strong>one-hot encoding</strong>.</p>
+<p>To perform one-hot encoding on a categorical variable, we must introduce new variables, referred to as <strong>dummy variables</strong>. The encoding will have one dummy variable for each level found within the categorical variable. The values found within a dummy variable will be either 0 or 1. A particular dummy variable is equal to one for observations with the associated level, and is zero otherwise.</p>
+<p>For example, assume that we have a categorical variable <code>Z</code> with four levels: <code>a</code>, <code>b</code>, <code>c</code>, and <code>d</code>. A one-hot encoding for <code>Z</code> will create four new variables: <code>Za</code>, <code>Zb</code>, <code>Zc</code>, and <code>Zd</code>. The value of these dummy variables for each possible level of <code>Z</code> is shown in the table below.</p>
+<table>
+<thead><tr>
+<th>Z</th>
+<th>-</th>
+<th>Za</th>
+<th>Zb</th>
+<th>Zc</th>
+<th>Zd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>-</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>b</td>
+<td>-</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>c</td>
+<td>-</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>d</td>
+<td>-</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>We could perform one-hot encoding manually using tools provided by numpy and pandas. However, sklearn provides a class <code>OneHotEncoder</code> for performing one-hot encoding. This class can be imported as follows:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">OneHotEncoder</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will now consider a simple example to demonstrate how to perform one-hot encoding.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-One-Hot-Encoding">Example: One-Hot Encoding<a class="anchor-link" href="#Example:-One-Hot-Encoding"> </a></h2><p>Assume that we have a data set of customers for an online retailer, and we wish to build a model to help us make marketing decisions. Suppose the data set contains three categorical features:</p>
+<ul>
+<li><strong><code>sex</code></strong> - The sex of the customer. This has levels "F" and "M".</li>
+<li><strong><code>emp</code></strong> - The customer's employment status. This has levels "FT" (full time), "PT" (part time), and "U" (unemployed).</li>
+<li><strong><code>reg</code></strong> - The region in which the customer lives. This is encoded with levels 1 (Americas), 2 (Asia), and 3 (Europe). </li>
+</ul>
+<p>A DataFrame containing 6 observations from the DataSet has been created below.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;sex&#39;</span><span class="p">:[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;emp&#39;</span><span class="p">:[</span><span class="s1">&#39;PT&#39;</span><span class="p">,</span> <span class="s1">&#39;FT&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;FT&#39;</span><span class="p">,</span> <span class="s1">&#39;PT&#39;</span><span class="p">,</span> <span class="s1">&#39;PT&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;reg&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">X_cat</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>emp</th>
+      <th>reg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>M</td>
+      <td>PT</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>F</td>
+      <td>FT</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>F</td>
+      <td>U</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>M</td>
+      <td>FT</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>M</td>
+      <td>PT</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>F</td>
+      <td>PT</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that <code>sex</code> has two levels, while <code>emp</code> and <code>reg</code> each have three levels. If we apply one-hot encoding to this DataFrame, the encoding will consist of 8 columns.</p>
+<p>In the cell below, we will use <code>OneHotEncoder</code> to perform the encoding. This is a three-step process:</p>
+<ol>
+<li>Create an instance of the encoder object. </li>
+<li>Fit the encoder to the data using the <strong><code>fit()</code></strong> method. This does not actually perform the encoding. It simply learns the levels for each categorical variable.</li>
+<li>We then perform the encoding using the <strong><code>transform()</code></strong> method of the encoder object.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_cat</span><span class="p">)</span>
+<span class="n">X_enc</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_cat</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_enc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0. 1. 0. 1. 0. 1. 0. 0.]
+ [1. 0. 1. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 0. 1. 0. 0. 1.]
+ [0. 1. 1. 0. 0. 0. 1. 0.]
+ [0. 1. 0. 1. 0. 1. 0. 0.]
+ [1. 0. 0. 1. 0. 0. 1. 0.]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The output of the encoder is an array. Since the columns are not labeled, it can be difficult to tell what the new columns refer to. The columns of the original DataFrame are encoded from left to right, and the encoded columns for a particular variable are arranged in alphabetical order by level.</p>
+<p>It follows that the first two columns of the encoded DataFrame encode the <code>sex</code> variable. The first column refers to <code>F</code>, and the second to <code>M</code>. The next three columns are associated with <code>emp</code>, and are arranged in the order <code>FT</code>, <code>PT</code>, and <code>U</code>. The final three columns encode the <code>reg</code> variable, and refer to levels <code>1</code>, <code>2</code>, and <code>3</code>, in that order.</p>
+<p>We will make this clearer by converting the encoded array into a data frame and adding column names.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_enc_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_enc</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">))</span>
+<span class="n">X_enc_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sex_F&#39;</span><span class="p">,</span> <span class="s1">&#39;sex_M&#39;</span><span class="p">,</span> <span class="s1">&#39;emp_FT&#39;</span><span class="p">,</span> <span class="s1">&#39;emp_PT&#39;</span><span class="p">,</span> 
+                  <span class="s1">&#39;emp_U&#39;</span><span class="p">,</span> <span class="s1">&#39;reg_1&#39;</span><span class="p">,</span> <span class="s1">&#39;reg_2&#39;</span><span class="p">,</span> <span class="s1">&#39;reg_3&#39;</span><span class="p">]</span>
+<span class="n">X_enc_df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex_F</th>
+      <th>sex_M</th>
+      <th>emp_FT</th>
+      <th>emp_PT</th>
+      <th>emp_U</th>
+      <th>reg_1</th>
+      <th>reg_2</th>
+      <th>reg_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To help illustrate how the encoding was performed, we will now join the original DataFrame with the encoded DataFrame.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;---&#39;</span><span class="p">:[</span><span class="s1">&#39;---&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">6</span><span class="p">})</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_cat</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">X_enc_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>emp</th>
+      <th>reg</th>
+      <th>---</th>
+      <th>sex_F</th>
+      <th>sex_M</th>
+      <th>emp_FT</th>
+      <th>emp_PT</th>
+      <th>emp_U</th>
+      <th>reg_1</th>
+      <th>reg_2</th>
+      <th>reg_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>M</td>
+      <td>PT</td>
+      <td>1</td>
+      <td>---</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>F</td>
+      <td>FT</td>
+      <td>3</td>
+      <td>---</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>F</td>
+      <td>U</td>
+      <td>3</td>
+      <td>---</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>M</td>
+      <td>FT</td>
+      <td>2</td>
+      <td>---</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>M</td>
+      <td>PT</td>
+      <td>1</td>
+      <td>---</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>F</td>
+      <td>PT</td>
+      <td>2</td>
+      <td>---</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Feature-Scaling">Feature Scaling<a class="anchor-link" href="#Feature-Scaling"> </a></h2><p>For some supervised learning models, it is important for all of the numerical features to be on roughly the same scale. When working with these models, it is typically necessary to scale any numerical features prior to using them to create a supervised learning model.</p>
+<p>We will discuss two common scaling techniques: <strong>Min-Max Scaling</strong> and <strong>Standard Scaling</strong> (or <strong>Standardization</strong>).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Min-Max-Scaling">Min-Max Scaling<a class="anchor-link" href="#Min-Max-Scaling"> </a></h2><p>Let $X$ refer to a feature in a dataset. Let $x_{min}$ be the smallest value of $X$ for observations in the set, and let $x_{max}$ be the largest value of $X$ for observations in the set.</p>
+<p>If $x_0$ is a value of $X$ for an observation, its scaled value is given by: $\large w_0 = \frac{x_0 ~-~ x_{min}}{x_{max} ~-~ x_{min}}$</p>
+<p>When using min-max scaling to scale features, each feature in the scaled set will have values ranging between 0 and 1.</p>
+<p>We can perform min-max scaling using the <code>MinMaxScaler</code> class from <code>sklearn.preprocessing</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will now see an example of applying min-max scaling to numerical features.</p>
+<h2 id="Example:-Min-Max-Scaling">Example: Min-Max Scaling<a class="anchor-link" href="#Example:-Min-Max-Scaling"> </a></h2><p>Assume that we are creating a supervised learning model to predict the prices of houses. Suppose our dataset contains the following three numerical features:</p>
+<ul>
+<li><strong><code>rooms</code></strong> - The number of rooms in the house.</li>
+<li><strong><code>sqft</code></strong> - The size of the living area of the house, in square feet.</li>
+<li><strong><code>lot</code></strong> - The size of the lot, in acres. </li>
+</ul>
+<p>Suppose our dataset consists of the following 6 observations:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;rooms&#39;</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> 
+    <span class="s1">&#39;sqft&#39;</span><span class="p">:[</span><span class="mi">2100</span><span class="p">,</span> <span class="mi">3400</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">2900</span><span class="p">,</span> <span class="mi">2800</span><span class="p">,</span> <span class="mi">2300</span><span class="p">],</span>
+    <span class="s1">&#39;lot&#39;</span><span class="p">:[</span><span class="mf">0.34</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.24</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">,</span> <span class="mf">0.28</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">X_num</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>2100</td>
+      <td>0.34</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>3400</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8</td>
+      <td>1800</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11</td>
+      <td>2900</td>
+      <td>0.49</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>2800</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9</td>
+      <td>2300</td>
+      <td>0.28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using <code>MinMaxScaler</code> to perform feature scaling is a three step process:</p>
+<ol>
+<li>Create an instance of the scaler object. </li>
+<li>Fit the scaler to the data using the <strong><code>fit()</code></strong> method. This does not actually perform the scaling. It simply learns the min and max values for each feature.</li>
+<li>We then perform the scaling using the <strong><code>transform()</code></strong> method of the scaler object.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mm_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">mm_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_num</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">X_mm</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_mm</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.5    0.1875 0.4   ]
+ [1.     1.     0.84  ]
+ [0.     0.     0.    ]
+ [0.75   0.6875 1.    ]
+ [0.5    0.625  0.52  ]
+ [0.25   0.3125 0.16  ]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the cell below, we display the scaled values next to the original feature values.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_mm_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_mm</span><span class="p">)</span>
+<span class="n">X_mm_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rooms_mm&#39;</span><span class="p">,</span> <span class="s1">&#39;sqft_mm&#39;</span><span class="p">,</span> <span class="s1">&#39;lot_mm&#39;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_num</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">X_mm_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+      <th>---</th>
+      <th>rooms_mm</th>
+      <th>sqft_mm</th>
+      <th>lot_mm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>2100</td>
+      <td>0.34</td>
+      <td>---</td>
+      <td>0.50</td>
+      <td>0.1875</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>3400</td>
+      <td>0.45</td>
+      <td>---</td>
+      <td>1.00</td>
+      <td>1.0000</td>
+      <td>0.84</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8</td>
+      <td>1800</td>
+      <td>0.24</td>
+      <td>---</td>
+      <td>0.00</td>
+      <td>0.0000</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11</td>
+      <td>2900</td>
+      <td>0.49</td>
+      <td>---</td>
+      <td>0.75</td>
+      <td>0.6875</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>2800</td>
+      <td>0.37</td>
+      <td>---</td>
+      <td>0.50</td>
+      <td>0.6250</td>
+      <td>0.52</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9</td>
+      <td>2300</td>
+      <td>0.28</td>
+      <td>---</td>
+      <td>0.25</td>
+      <td>0.3125</td>
+      <td>0.16</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Standard-Scaling">Standard Scaling<a class="anchor-link" href="#Standard-Scaling"> </a></h2><p>Let $X$ refer to a feature in a dataset. Let $\bar x$ be the mean of $X$ values for observations in the set, and let $s_X$ be the standard deviation of $X$ for observations in the set.</p>
+<p>If $x_0$ is a value of $X$ for an observation, its standard scaled value is given by: $\large z_0 = \frac{x_0 ~-~ \bar x}{s_X}$</p>
+<p>When using standardication to scale features, then each feature in the scaled set will have a mean of 0 and a standard deviation of 1.</p>
+<p>We can perform standardization using the <code>StandardScaler</code> class from <code>sklearn.preprocessing</code>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will now see an example of standard scaling of numerical features.</p>
+<h2 id="Example:-Standard-Scaling">Example: Standard Scaling<a class="anchor-link" href="#Example:-Standard-Scaling"> </a></h2><p>We will demonstrate standard scaling using the housing data from the previous example.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>2100</td>
+      <td>0.34</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>3400</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8</td>
+      <td>1800</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11</td>
+      <td>2900</td>
+      <td>0.49</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>2800</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9</td>
+      <td>2300</td>
+      <td>0.28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using <code>StandardScaler</code> to perform feature scaling is a three step process:</p>
+<ol>
+<li>Create an instance of the scaler object. </li>
+<li>Fit the scaler to the data using the <strong><code>fit()</code></strong> method. This does not actually perform the scaling. It simply learns the mean and standard deviation for each feature.</li>
+<li>We then perform the scaling using the <strong><code>transform()</code></strong> method of the scaler object.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ss_scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">ss_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_num</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">X_ss</span> <span class="o">=</span> <span class="n">ss_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_ss</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0.         -0.83683223 -0.2466922 ]
+ [ 1.54919334  1.5806831   1.00574511]
+ [-1.54919334 -1.39472039 -1.38527157]
+ [ 0.77459667  0.65086951  1.46117686]
+ [ 0.          0.4649068   0.09488161]
+ [-0.77459667 -0.4649068  -0.92983982]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the cell below, we display the scaled values next to the original feature values.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_ss_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_ss</span><span class="p">)</span>
+<span class="n">X_ss_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rooms_ss&#39;</span><span class="p">,</span> <span class="s1">&#39;sqft_ss&#39;</span><span class="p">,</span> <span class="s1">&#39;lot_ss&#39;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_num</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">X_ss_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+      <th>---</th>
+      <th>rooms_ss</th>
+      <th>sqft_ss</th>
+      <th>lot_ss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>2100</td>
+      <td>0.34</td>
+      <td>---</td>
+      <td>0.000000</td>
+      <td>-0.836832</td>
+      <td>-0.246692</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>3400</td>
+      <td>0.45</td>
+      <td>---</td>
+      <td>1.549193</td>
+      <td>1.580683</td>
+      <td>1.005745</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8</td>
+      <td>1800</td>
+      <td>0.24</td>
+      <td>---</td>
+      <td>-1.549193</td>
+      <td>-1.394720</td>
+      <td>-1.385272</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11</td>
+      <td>2900</td>
+      <td>0.49</td>
+      <td>---</td>
+      <td>0.774597</td>
+      <td>0.650870</td>
+      <td>1.461177</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>2800</td>
+      <td>0.37</td>
+      <td>---</td>
+      <td>0.000000</td>
+      <td>0.464907</td>
+      <td>0.094882</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9</td>
+      <td>2300</td>
+      <td>0.28</td>
+      <td>---</td>
+      <td>-0.774597</td>
+      <td>-0.464907</td>
+      <td>-0.929840</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Feature-Scaling-and-Training,-Validation,-and-Test-Sets">Feature Scaling and Training, Validation, and Test Sets<a class="anchor-link" href="#Feature-Scaling-and-Training,-Validation,-and-Test-Sets"> </a></h2><p>When using scaled features to create a supervised learning model, it is important that the feature scaler is fit using the exact same data set that the model will be trained on. From the perspective of using <code>sklearn</code>, this means that the <code>fit()</code> method of a scaler object should only ever be used on the training set. Once the scaler has been fit to the training set, its <code>transform()</code> method can then be used to scale the validation set, the training set, or a set of newly collected data.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-Scaling-a-Test-Set">Example: Scaling a Test Set<a class="anchor-link" href="#Example:-Scaling-a-Test-Set"> </a></h2><p>Returning to our housing example, assume that we have used the previous six observations to train a model.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num_train</span> <span class="o">=</span> <span class="n">X_num</span>
+<span class="n">X_num_train</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>2100</td>
+      <td>0.34</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>3400</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8</td>
+      <td>1800</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11</td>
+      <td>2900</td>
+      <td>0.49</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10</td>
+      <td>2800</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>9</td>
+      <td>2300</td>
+      <td>0.28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Suppse we ultimately wish to test our model using the following three observations.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;rooms&#39;</span><span class="p">:[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> 
+    <span class="s1">&#39;sqft&#39;</span><span class="p">:[</span><span class="mi">3200</span><span class="p">,</span> <span class="mi">1600</span><span class="p">,</span> <span class="mi">2700</span><span class="p">],</span>
+    <span class="s1">&#39;lot&#39;</span><span class="p">:[</span><span class="mf">0.56</span><span class="p">,</span> <span class="mf">0.31</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">X_num_test</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rooms</th>
+      <th>sqft</th>
+      <th>lot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+      <td>3200</td>
+      <td>0.56</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td>1600</td>
+      <td>0.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10</td>
+      <td>2700</td>
+      <td>0.42</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we were to apply min-max scaling, we would need to first fit the scaler to the training set, and then apply it to both the training and test sets.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mm_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">mm_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_num_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+
+<span class="n">X_mm_train</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">X_mm_test</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_mm_train</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0.5    0.1875 0.4   ]
+ [1.     1.     0.84  ]
+ [0.     0.     0.    ]
+ [0.75   0.6875 1.    ]
+ [0.5    0.625  0.52  ]
+ [0.25   0.3125 0.16  ]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">X_mm_test</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 0.75    0.875   1.28  ]
+ [ 0.     -0.125   0.28  ]
+ [ 0.5     0.5625  0.72  ]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the values in the scaled version of the training set are all between 0 and 1. That is not the case for the scaled version of the test set. If an observation in the test set contains a feature value that is less than the minimum value of that feature in the training set, then its scaled value will be negative. Likewise, if a feature value in the test set is larger than the maximum of that feature in the training set, then its scaled value will be greater than 1.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Example:-Titanic-Dataset">Example: Titanic Dataset<a class="anchor-link" href="#Example:-Titanic-Dataset"> </a></h2><p>We will now provide an example illustrating how to use feature scaling, one-hot encoding, and data splitting to prepare data for use in creating a model.</p>
+<p>For this example, we will be using the Titanic Dataset. This dataset contains the following pieces of information for each of the 887 passengers on the voyage of the Titanic.</p>
+<ul>
+<li><strong><code>Survived</code></strong> - Binary variable indicating whether or not the passenger survived the voyage. </li>
+<li><strong><code>Pclass</code></strong> - Categorical variable indicating the passenger class. </li>
+<li><strong><code>Name</code></strong> - The Passenger's name.</li>
+<li><strong><code>Sex</code></strong> - Categorical variable indicating the sex of the passenger. </li>
+<li><strong><code>Age</code></strong> - Age of the passenger.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/titanic.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">titanic</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>Mr. Owen Harris Braund</td>
+      <td>male</td>
+      <td>22.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Mrs. John Bradley (Florence Briggs Thayer) Cum...</td>
+      <td>female</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>Miss. Laina Heikkinen</td>
+      <td>female</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Mrs. Jacques Heath (Lily May Peel) Futrelle</td>
+      <td>female</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>Mr. William Henry Allen</td>
+      <td>male</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>3</td>
+      <td>Mr. James Moran</td>
+      <td>male</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>1</td>
+      <td>Mr. Timothy J McCarthy</td>
+      <td>male</td>
+      <td>54.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>3</td>
+      <td>Master. Gosta Leonard Palsson</td>
+      <td>male</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>3</td>
+      <td>Mrs. Oscar W (Elisabeth Vilhelmina Berg) Johnson</td>
+      <td>female</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>2</td>
+      <td>Mrs. Nicholas (Adele Achem) Nasser</td>
+      <td>female</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extracting-Labels">Extracting Labels<a class="anchor-link" href="#Extracting-Labels"> </a></h3><p>Suppose we are interested in creating a model to predict whether or not a passenger would survive based on their passenger class, sex, and age. We will start by extracting the labels from the DataFrame.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;Survived&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(887,)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Separating-Categorical-and-Numerical-Features">Separating Categorical and Numerical Features<a class="anchor-link" href="#Separating-Categorical-and-Numerical-Features"> </a></h3><p>Since <code>Pclass</code> and <code>Sex</code> are categorical variables, we will need to apply one-hot encoding to these. Suppose that we wish to apply min-max scaling to the single numerical variable, <code>Age</code>. Since these features require different types of processing, we will split these into two different DataFrames.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_cat</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_cat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(887, 2)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_num</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(887, 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="One-Hot-Encoding-of-Categorical-Variables">One-Hot Encoding of Categorical Variables<a class="anchor-link" href="#One-Hot-Encoding-of-Categorical-Variables"> </a></h3><p>We will apply one-hot encoding to the categorical variables.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_cat</span><span class="p">)</span>
+<span class="n">X_enc</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_cat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_enc</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(887, 5)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splitting-the-Data">Splitting the Data<a class="anchor-link" href="#Splitting-the-Data"> </a></h3><p>Recall that a feature scaler must be trained only on the training data. As a result, we must perform our train/validation/test split before performing scaling. Suppose we wish to create a 70/15/15 split.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_num_train</span><span class="p">,</span> <span class="n">X_num_hold</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_hold</span> <span class="o">=</span>\
+    <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_num</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">X_num_valid</span><span class="p">,</span> <span class="n">X_num_test</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span>\
+    <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_num_hold</span><span class="p">,</span> <span class="n">y_hold</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_hold</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_num_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_num_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_num_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(620, 1)
+(133, 1)
+(134, 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since we will eventually want to merge our encoded categorical features back with the scaled numerical features, we should also perform the same split on our encoded categorical feature array.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_enc_train</span><span class="p">,</span> <span class="n">X_enc_hold</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_hold</span> <span class="o">=</span>\
+    <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_enc</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">X_enc_valid</span><span class="p">,</span> <span class="n">X_enc_test</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span>\
+    <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_enc_hold</span><span class="p">,</span> <span class="n">y_hold</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_hold</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_enc_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_enc_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_enc_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(620, 5)
+(133, 5)
+(134, 5)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scaling-Numerical-Features.">Scaling Numerical Features.<a class="anchor-link" href="#Scaling-Numerical-Features."> </a></h3><p>We will now apply min-max scaling to the single numerical feature.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mm_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">mm_scaler</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_num_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+
+<span class="n">X_mm_train</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">X_mm_valid</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num_valid</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">X_mm_test</span> <span class="o">=</span> <span class="n">mm_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_num_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_mm_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_mm_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_mm_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(620, 1)
+(133, 1)
+(134, 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Recombining-Feature-Arrays">Recombining Feature Arrays<a class="anchor-link" href="#Recombining-Feature-Arrays"> </a></h3><p>We have completed the desired encoding and scaling of features. We must now combine the encoded categorical features with the scaled numerical features. We will need to do this for the training set, the validation set, and the test set.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_enc_train</span><span class="p">,</span> <span class="n">X_mm_train</span><span class="p">])</span>
+<span class="n">X_valid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_enc_valid</span><span class="p">,</span> <span class="n">X_mm_valid</span><span class="p">])</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_enc_test</span><span class="p">,</span> <span class="n">X_mm_test</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_valid</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(620, 6)
+(133, 6)
+(134, 6)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Moving-on-to-the-Modeling-Step">Moving on to the Modeling Step<a class="anchor-link" href="#Moving-on-to-the-Modeling-Step"> </a></h3><p>We are now ready to use the processed data to create supervised learning models. We will discuss this process in more detail in future lectures. However, to provide a quick example of the modeling process, we will train three models on the training set. In particular, we will train a logistic regression model, a decision tree model, and a KNN model. We will score each model on the validation set.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
+
+<span class="n">model_1</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;lbfgs&#39;</span><span class="p">)</span>
+<span class="n">model_1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">model_2</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">model_2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">model_3</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">model_3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 1 Training Accuracy:  &quot;</span><span class="p">,</span> <span class="n">model_1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 1 Validation Accuracy:&quot;</span><span class="p">,</span> <span class="n">model_1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 2 Training Accuracy:  &quot;</span><span class="p">,</span> <span class="n">model_2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 2 Validation Accuracy:&quot;</span><span class="p">,</span> <span class="n">model_2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 3 Training Accuracy:  &quot;</span><span class="p">,</span> <span class="n">model_3</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 3 Validation Accuracy:&quot;</span><span class="p">,</span> <span class="n">model_3</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Model 1 Training Accuracy:   0.8
+Model 1 Validation Accuracy: 0.7593984962406015
+
+Model 2 Training Accuracy:   0.8274193548387097
+Model 2 Validation Accuracy: 0.7669172932330827
+
+Model 3 Training Accuracy:   0.8419354838709677
+Model 3 Validation Accuracy: 0.7894736842105263
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Model 3 has the best performance on the validation set. We will select Model 3 to be our final model and score it one last time on the test set.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model 1 Testing Accuracy:  &quot;</span><span class="p">,</span> <span class="n">model_3</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Model 1 Testing Accuracy:   0.7835820895522388
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,238 @@
+---
+redirect_from:
+  - "/pages/intro-to-ml"
+interact_link: content/pages/intro_to_ml.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Introduction to Machine Learning
+pagenum: 62
+prev_page:
+  url: /pages/foo4.html
+next_page:
+  url: /pages/blah5.html
+suffix: .ipynb
+search: learning classification machine regression tasks task predicting algorithm supervised unsupervised data set reinforcement images model examples drbeane github io files png training its example below clustering applications values features labels figure shows provided play agent youtube algorithms models trained rules recognition goal prediction function output based typically label target continuous include classes plot represents different point not www com watch v following perform through trial error detection results image voice credit problems class input called into whether real score risk upper left used axis feature created observation might interact environment rl super mario lesson introduction topics discussed notebook overview discussion
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Introduction to Machine Learning</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-21---Introduction-to-Machine-Learning">Lesson 21 - Introduction to Machine Learning<a class="anchor-link" href="#Lesson-21---Introduction-to-Machine-Learning"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li>Overview of machine learning. </li>
+<li>Discussion supervised vs unsupervised learning.  </li>
+<li>Examples of regression and classification tasks. </li>
+<li>Examples of clustering tasks. </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Machine-Learning">What is Machine Learning<a class="anchor-link" href="#What-is-Machine-Learning"> </a></h2><p>Machine learning is a subfield of artificial intelligence that uses computer science, mathematics, and statistics to create algorithms capable of analyzing and learning from previously collected data. Machine learning models are trained to perform certain tasks through trial and error, rather than by following a set of rules that have been explicitly programmed by a human. In many cases, this approach is simpler to implement than developing explicit rules, and is often more effective.</p>
+<h2 id="Applications-of-Machine-Learning">Applications of Machine Learning<a class="anchor-link" href="#Applications-of-Machine-Learning"> </a></h2><p>Machine learning has applications in many fields. A (non-exaustive) list of applications includes spam detection, generating search results, image classification, voice recognition, programming autonomous vehicles, predicting credit scores, predicting housing costs, medical diagnoses, recommender systems, and handwriting recognition.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Types-of-Machine-Learning-Algorithms">Types of Machine Learning Algorithms<a class="anchor-link" href="#Types-of-Machine-Learning-Algorithms"> </a></h2><p>There are three main categories of machine learning problems: <strong>supervised learning</strong>, <strong>unsupervised learning</strong>, and <strong>reinforcement learning</strong>.</p>
+<p>In this class, we will focus primarily on supervised learning.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drbeane.github.io/files/images/303/Types_of_ML.png" alt="ML"></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Supervised-Learning">Supervised Learning<a class="anchor-link" href="#Supervised-Learning"> </a></h2><p>In a supervised learning task, the goal is to generate a <strong>model</strong> or <strong>prediction function</strong> that can predict an output based on one or more input values.</p>
+<ul>
+<li>The output of the model is typically called a <strong>label</strong>, <strong>target value</strong>, or <strong>response variable</strong>.</li>
+<li>The inputs into the model are typically called <strong>features</strong> or <strong>predictors</strong>. </li>
+</ul>
+<p>The algorithm "learns" the optimal model by studying a training set of data that consists of several <strong>observations</strong> (or <strong>instances</strong>, or <strong>samples</strong>), each of which contains values for both its features and its label. You can imagine a supervised learning algorithm as a function that takes training data as input, and that produces a model, or prediction function, as its output.</p>
+<h3 id="Regression-and-Classification">Regression and Classification<a class="anchor-link" href="#Regression-and-Classification"> </a></h3><p>Supervised learning tasks can be further grouped into <strong>regression</strong> and <strong>classification</strong> problems, based on whether the labels are continuous and real-valued or categorical.</p>
+<ul>
+<li><strong>Regression.</strong> A regression task is one for which the target values are continuous, real numbers. Examples of regression tasks include:<ul>
+<li>Predicting a credit score.</li>
+<li>Predicting the sale price of a home. </li>
+<li>Predicting blood pressure or cholesterol levels.</li>
+<li>Predicting unemployment rates. </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Classification.</strong> A classification task is one for which the target values are discrete classes. Examples of classification tasks include:<ul>
+<li>Predicting whether a loan is "high risk" or "low risk". </li>
+<li>Predicting the species of an organism based on measurements. </li>
+<li>Image classification. </li>
+<li>Recognizing images of hand-written letters or digits. </li>
+<li>Voice recognition. </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example-of-a-Regression-Task">Example of a Regression Task<a class="anchor-link" href="#Example-of-a-Regression-Task"> </a></h3><p>The upper left plot in the figure below shows a small data set that could be used for a regression task. The horizontal axis represents the single feature, while the vertical axis represents the continuous label.</p>
+<p>The figure also displays plots of 5 models (or prediction functions) that were generated using different regression algorithms.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drbeane.github.io/files/images/303/regression_example.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example-of-a-Classification-Task">Example of a Classification Task<a class="anchor-link" href="#Example-of-a-Classification-Task"> </a></h3><p>The upper left plot in the figure below shows the plot of a sythetic data set created for use in a classification task. The two axes represent two different features. Each point represents a singple observation. Each observation is assigned on of two classes, "Orange" or "Blue", as indicated by the color of the point.</p>
+<p>A model created by a classification algorithm would assign one of the two classes to each point in the plane. The figure below shows the regions designated as being in each class according to 5 different classification models.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drbeane.github.io/files/images/303/classification_example.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unsupervised-Learning">Unsupervised Learning<a class="anchor-link" href="#Unsupervised-Learning"> </a></h2><p>In unsupervised learning, we work with data sets in which features are provided, but no labels. Not only are the labels "missing", but we typically do not start an unsupervised learning tasks with a preconception of what the possible labels might be. The goal of unsupervised learning is to identify structure within the data that might not be readily perceptible to humans.</p>
+<p>Some common unsupervised learning tasks are:</p>
+<ul>
+<li>Clustering</li>
+<li>Anomaly Detection</li>
+<li>Feature extraction</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The cell below shows the results of applying a clustering algorithm to an unlabeled dataset. The algorithm used in this example is referred to as <strong>K-means clustering</strong>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drbeane.github.io/files/images/303/clustering_example.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reinforcement-Learning">Reinforcement Learning<a class="anchor-link" href="#Reinforcement-Learning"> </a></h2><p>Reinforcement learning is a branch of machine learning concerned with training an AI to interact with an virtual environment to perform a specific task. Examples of reinforcement learning tasks include training an algortihm to play chess, to play a video game, or to navigate a self-driving car.</p>
+<p>In reinforcement learning, a software agent is provided with rules governing how it can interact with its environment. A goal is set for the agent, and a method is provided to score how successful the agent is at accomplishing that task. The RL algorithm then collects a training set through trial-and-error. Which each new attempt, the agent receives feedback regarding its performance, and then makes adjustments as needed.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://drbeane.github.io/files/images/303/Reinforcement_Learning.png" alt="RL"></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some links to YouTube videos demonstrating interesting applications of reinforcement learning are provided below.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=qv6UVOQ0F44">MarI/O - Example of an algorithm trained to play Super Mario World.</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ipi40cb_RsI">MariFlow - Example of an algorithm trained to play Super Mario Kart.</a></li>
+<li><a href="https://www.youtube.com/watch?v=hx_bgoTF7bs">Emergence of Locomotion Behaviours in Rich Environments.</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
