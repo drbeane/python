@@ -1,0 +1,688 @@
+---
+redirect_from:
+  - "/pages/collections"
+interact_link: content/pages/Collections.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Collections
+pagenum: 14
+prev_page:
+  url: /pages/dictionaries.html
+next_page:
+  url: /features/notebooks.html
+suffix: .ipynb
+search: dictionary dictionaries using store key data values value structured list pairs index information individual table following dict type several used access associated below keys elements lookup tables objects code lists convenient records columns lesson topics discussed notebook collection consist pair much whereas must integer different types created syntax mydict keyn valuen basic operations cell defines simple salary employees add new follows also update delete entries del keyword not ordered dont allow slicing however loop len function determine contain common application create lets say unique identifer assigned assume frequently characteristics based identifier easily done illustrates might id name student database case
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Collections</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Lesson-17---Dictionaries">Lesson 17 - Dictionaries<a class="anchor-link" href="#Lesson-17---Dictionaries"> </a></h1><h3 id="The-following-topics-are-discussed-in-this-notebook:">The following topics are discussed in this notebook:<a class="anchor-link" href="#The-following-topics-are-discussed-in-this-notebook:"> </a></h3><ul>
+<li>The <code>dict</code> data type.</li>
+<li>Using dictionaries to store structured data.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries"> </a></h2><p>Like a list, a <strong>dictionary</strong>, or <code>dict</code>, is a collection of values. Dictionaries consist of several <strong>key-value</strong> pairs. Each pair has a <strong>key</strong> which is used to access the <strong>value</strong> associated with it. The key in a dictionary is much like an index in a list, but whereas an index must be an integer, a key can be of many different data types.</p>
+<p>Dictionaries are created using the following syntax:</p>
+
+<pre><code>my_dict = {key1:value1, key2:value2, ..., keyN:valueN}</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Basic-Dictionary-Operations">Basic Dictionary Operations<a class="anchor-link" href="#Basic-Dictionary-Operations"> </a></h2><p>The cell below defines a simple dictionary that is used to store salary information for employees.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salary_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Anna&#39;</span><span class="p">:</span><span class="mi">43700</span><span class="p">,</span> <span class="s1">&#39;Beth&#39;</span><span class="p">:</span> <span class="mi">50250</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Anna&#39;: 43700, &#39;Beth&#39;: 50250}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can access individual values of the dictionary using the associated keys.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Anna&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Beth&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>43700
+50250
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can add new key-value pairs to a dictionary as follows:</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Craig&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">47600</span>
+<span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Drew&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">37400</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Anna&#39;: 43700, &#39;Beth&#39;: 50250, &#39;Craig&#39;: 47600, &#39;Drew&#39;: 37400}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also update values in a dictionary.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Drew&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">39800</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Anna&#39;: 43700, &#39;Beth&#39;: 50250, &#39;Craig&#39;: 47600, &#39;Drew&#39;: 39800}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can delete entries from a dictionary using the <strong>del</strong> keyword.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">salary_dict</span><span class="p">[</span><span class="s1">&#39;Craig&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Anna&#39;: 43700, &#39;Beth&#39;: 50250, &#39;Drew&#39;: 39800}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dictionary elements are not ordered, and so dictionaries don't allow for slicing. You can, however, loop over the elements of a dictionary.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">salary_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">salary_dict</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Anna: 43700
+Beth: 50250
+Drew: 39800
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use the <code>len()</code> function on dictionaries to determine the number of values that they contain.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">salary_dict</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lookup-Tables">Lookup Tables<a class="anchor-link" href="#Lookup-Tables"> </a></h2><p>One common application of dictionaries is to create lookup tables. Let's say that you have several objects, and each one has a unique identifer assigned to it. Assume that your code has to frequently look up characteristics of the objects based on their identifier. This can be easily done with a dictionary.</p>
+<p>The code below illustrates how you might use a dictionary to store ID-Name pairs in a student database.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_lookup</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">601814</span><span class="p">:</span> <span class="s1">&#39;Brown, Mary&#39;</span><span class="p">,</span>
+    <span class="mi">716978</span><span class="p">:</span> <span class="s1">&#39;Green, John&#39;</span><span class="p">,</span>
+    <span class="mi">617945</span><span class="p">:</span> <span class="s1">&#39;Jones, Lana&#39;</span><span class="p">,</span>
+    <span class="mi">863794</span><span class="p">:</span> <span class="s1">&#39;Smith, Hank&#39;</span><span class="p">,</span>
+    <span class="mi">816773</span><span class="p">:</span> <span class="s1">&#39;Green, John&#39;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">student_lookup</span><span class="p">[</span><span class="mi">617945</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">student_lookup</span><span class="p">[</span><span class="mi">816773</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Jones, Lana
+Green, John
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Dictionaries-to-Store-Structured-Data">Using Dictionaries to Store Structured Data<a class="anchor-link" href="#Using-Dictionaries-to-Store-Structured-Data"> </a></h2><p>The values in a dictionary can be lists. This is convenient if we would like use a dictionary to store records of some type. In this case, we can imagine the keys of the dictionary as indicating columns in a table.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employee_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;EID&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">103</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">108</span><span class="p">],</span>
+    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anna&#39;</span><span class="p">,</span> <span class="s1">&#39;Beth&#39;</span><span class="p">,</span> <span class="s1">&#39;Craig&#39;</span><span class="p">,</span> <span class="s1">&#39;Drew&#39;</span><span class="p">,</span> <span class="s1">&#39;Emma&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Salary&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">43700</span><span class="p">,</span> <span class="mi">50250</span><span class="p">,</span> <span class="mi">47600</span><span class="p">,</span> <span class="mi">39800</span><span class="p">,</span> <span class="mi">38750</span><span class="p">],</span>
+    <span class="s1">&#39;Rank&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">employee_dict</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;EID&#39;: [103, 105, 101, 106, 108], &#39;Name&#39;: [&#39;Anna&#39;, &#39;Beth&#39;, &#39;Craig&#39;, &#39;Drew&#39;, &#39;Emma&#39;], &#39;Salary&#39;: [43700, 50250, 47600, 39800, 38750], &#39;Rank&#39;: [2, 1, 1, 2, 3]}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Anna&#39;, &#39;Beth&#39;, &#39;Craig&#39;, &#39;Drew&#39;, &#39;Emma&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we want to see the information for a specific entry in the table, we can provide the same index to each of the lists stored within the dictionary.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;EID</span><span class="se">\t</span><span class="s1"> Name</span><span class="se">\t</span><span class="s1"> Salary</span><span class="se">\t</span><span class="s1"> Rank&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">])):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
+          <span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;EID&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
+          <span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;Salary&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span>
+          <span class="n">employee_dict</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>EID	 Name	 Salary	 Rank
+---------------------------------
+Anna 	 103 	 43700 	 2
+Beth 	 105 	 50250 	 1
+Craig 	 101 	 47600 	 1
+Drew 	 106 	 39800 	 2
+Emma 	 108 	 38750 	 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One limitation of using a dictionary in this way is that there is no convenient way to extract all of the information related to a single individual at once.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As an alternate approach to using dictionaries to store structured data, we can store individual records in dictionaries, and then collect them together into a list (or another dictionary). In the setup, we could imaging the dictionaries as representing rows in a table rather than columns.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_cats</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Luna&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;birthplace&#39;</span><span class="p">:</span><span class="s1">&#39;State College, PA&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">14.3</span><span class="p">,</span> 
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> 
+        <span class="s1">&#39;characteristics&#39;</span><span class="p">:[</span><span class="s1">&#39;lazy&#39;</span><span class="p">,</span> <span class="s1">&#39;hungry&#39;</span><span class="p">,</span> <span class="s1">&#39;cranky&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Garbanzo&#39;</span><span class="p">,</span> 
+        <span class="s1">&#39;birthplace&#39;</span><span class="p">:</span><span class="s1">&#39;State College, PA&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">8.9</span><span class="p">,</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+        <span class="s1">&#39;characteristics&#39;</span><span class="p">:[</span><span class="s1">&#39;talkative&#39;</span><span class="p">,</span> <span class="s1">&#39;friendly&#39;</span><span class="p">,</span> <span class="s1">&#39;skittish&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Cauchy&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;birthplace&#39;</span><span class="p">:</span><span class="s1">&#39;State College, PA&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">10.6</span><span class="p">,</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+        <span class="s1">&#39;characteristics&#39;</span><span class="p">:[</span><span class="s1">&#39;insane&#39;</span><span class="p">,</span> <span class="s1">&#39;destructive&#39;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_cats</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">my_cats</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">my_cats</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name: Luna
+birthplace: State College, PA
+weight: 14.3
+age: 10
+characteristics: [&#39;lazy&#39;, &#39;hungry&#39;, &#39;cranky&#39;]
+
+name: Garbanzo
+birthplace: State College, PA
+weight: 8.9
+age: 10
+characteristics: [&#39;talkative&#39;, &#39;friendly&#39;, &#39;skittish&#39;]
+
+name: Cauchy
+birthplace: State College, PA
+weight: 10.6
+age: 3
+characteristics: [&#39;insane&#39;, &#39;destructive&#39;]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -54,34 +54,34 @@
   url: /features/features
   expand_sections: false
   sections:
-    - title: Arithmetic11
+    - title: Arithmetic
       url: /pages/arithmetic
     - title: Variables
-      url: /pages/arithmetic
+      url: /pages/variables
     - title: Basic Data Types
-      url: /pages/arithmetic
+      url: /pages/basic_data_types
       expand_subsections: false
       subsections:
       - title: Integers
-        url: /pages/strings
+        url: /pages/integers
       - title: Floats
-        url: /pages/strings
+        url: /pages/floats
       - title: Strings
         url: /pages/strings
       - title: Boolean Values
         url: /pages/booleans
     - title: Data Structures
-      url: /pages/lists
+      url: /pages/data_structures
       expand_subsections: false
       subsections:
       - title: Lists
-        url: /pages/more_lists
+        url: /pages/lists
       - title: Tuples
-        url: /pages/more_lists
+        url: /pages/tuples
       - title: Dictionaries
-        url: /pages/more_lists
+        url: /pages/dictionaries
       - title: Collections
-        url: /pages/more_lists
+        url: /pages/Collections
 
 - title: Control Flow
   url: /features/notebooks
