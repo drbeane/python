@@ -83,6 +83,21 @@ $topbar-height: 60px;
   left: 0;
 }
 
+.js-sidebar {
+  /*background-color: $color-sidebar-bg;*/
+  background-color: #fcd116;
+  width: $left-sidebar-width;
+  //padding: $spacing-unit-small;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+
 .c-sidebar__title {
   color: #f37726;
   font-size: 1.2em;
