@@ -74,6 +74,7 @@ $topbar-height: 60px;
 .c-textbook__sidebar {
   /*background-color: $color-sidebar-bg;*/
   background-color: #fcd116;
+  width: $left-sidebar-width;
   padding: $spacing-unit-small;
 
   @include inuit-font-size(14px);
