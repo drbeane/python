@@ -120,7 +120,7 @@ $topbar-height: 60px;
   }
 }
 
-.sidebar__right {
+#sidebar__right {
   // By default we hide the sidebar
   display: none;
 
@@ -176,12 +176,10 @@ $topbar-height: 60px;
 ::-webkit-scrollbar {
   width: 5px;
   background: #a55a55;
-  //background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #a55a55;
-  //background: #c1c1c1;
 }
 
 main, nav {
