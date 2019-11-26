@@ -23,7 +23,7 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Introduction_asdf
+- title: Introduction
   url: /intro
   not_numbered: true
   external: false
@@ -36,7 +36,7 @@
     #- from: ch/04/cleaning_intro
     #  to: ch/05/cleaning_intro
 
-- title: Abouts This Book
+- title: About This Book
   url: /about
   not_numbered: true
 
@@ -51,7 +51,7 @@
 - header: The Python Language
 
 - title: Python Basics
-  url: /features/features
+  url: /pages/python_basics
   expand_sections: false
   sections:
     - title: Arithmetic
@@ -84,7 +84,7 @@
         url: /pages/Collections
 
 - title: Control Flow
-  url: /features/notebooks
+  url: /pages/control_flow
   sections:
     - title: For Loops
       url: /pages/for_loops
@@ -100,128 +100,208 @@
       url: /pages/error_handling
 
 - title: Functions
-  url: /features/markdown
+  url: /pages/functions
   sections:
       - title: Defining Functions
+        url: /pages/defining_functions
       - title: Parameters and Arguments
+        url: /pages/parameters_and_arguments
       - title: Return Values
+        url: /pages/return_values
       - title: Scope
+        url: /pages/scope
       - title: Lambda Functions
+        url: /pages/lambda_functions
       - title: Recursion
+        url: /pages/recursion
 
 - title: Packages
+  url: /pages/packages
   sections:
       - title: Importing Packages
+        url: /pages/importing_packages
       - title: Namespaces and Aliases
+        url: /pages/namespaces
       - title: Math Package
+        url: /pages/math_package
       - title: Random Package
+        url: /pages/random_package
 
 - title: Classes
+  url: /pages/classes
   sections:
       - title: Defining Classes
+        url: /pages/defining_classes
       - title: Attributes and Methods
+        url: /pages/attributes_and_methods
       - title: Constructors
+        url: /pages/constructors
 
 - header: Working with Data
 
 - title: Numpy
+  url: /pages/numpy
   sections:
       - title: Numpy Arrays
+        url: /pages/numpy_arrays
       - title: Array Operations
+        url: /pages/array_operations
       - title: Array Comparisons
+        url: /pages/array_comparisons
       - title: Boolean Masking
+        url: /pages/boolean_masking
       - title: Fancy Indexing
+        url: /pages/fancy_indexing
       - title: Random Number Generation
+        url: /pages/random_number_generation
       - title: Multidimensional Arrays
+        url: /pages/nd_arrays
       - title: Additional Tools
+        url: /pages/additional_numpy_tools
 
 - title: Pandas
+  url: /pages/pandas
   sections:
       - title: Data Frames
+        url: /pages/data_frames
       - title: Working with Columns
+        url: /pages/working_with_columns
 
 - header: Data Visualization
 
 - title: Matplotlib
+  url: /pages/matplotlib
   sections:
       - title: blah
+        url: /pages/blah1
       - title: foo
+        url: /pages/foo1
 
 - title: Seaborn
+  url: /pages/seaborn
   sections:
       - title: blah
+        url: /pages/blah2
       - title: foo
+        url: /pages/foo2
 
 - title: Plotly
+  url: /pages/plotly
   sections:
       - title: blah
+        url: /pages/blah3
       - title: foo
+        url: /pages/foo3
 
-- title: That Other One
+- title: Bokeh
+  url: /pages/bokeh
   sections:
       - title: blah
+        url: /pages/blah4
       - title: foo
+        url: /pages/foo4
 
 - header: Machine Learning
 
 - title: Introduction to Machine Learning
+  url: /pages/intro_to_ml
   sections:
       - title: blah
+        url: /pages/blah5
       - title: foo
+        url: /pages/foo5
 
 - title: Supervised Learning
+  url: /pages/supervised_learning
   sections:
       - title: Linear Regression
+        url: /pages/linear_regression
       - title: Logistic Regression
+        url: /pages/logistic_regression
       - title: Classification Metrics
+        url: /pages/classification_metrics
       - title: K-Nearest  Neighbors
+        url: /pages/knn
       - title: Decision Trees
+        url: /pages/decision_trees
       - title: Support Vector Machines
+        url: /pages/svm
       - title: Feature Scaling
+        url: /pages/feature_scaling
       - title: Regularization
+        url: /pages/regularization
       - title: Cross Validation
+        url: /pages/cross_validation
 
 - title: Unsupervised Learning
+  url: /pages/unsupervised_learning
   sections:
       - title: Principal Components Analysis
+        url: /pages/pca
       - title: K-Means Clustering
+        url: /pages/k_means
       - title: Hierarchical Clustering
+        url: /pages/hierarchical_clustering
 
 - title: Reincorment Learning
+  url: /pages/reinforcement_learning
   sections:
       - title: Blah
+        url: /pages/blah6
       - title: Foo
+        url: /pages/foo6
 
 - header: Deep Learning
 
 - title: Artificial Neural Networks
+  url: /pages/into_to_ann
   sections:
       - title: The Artificial Neuron
+        url: /pages/artificial_neuron
       - title: ANN Architecture
+        url: /pages/ann_architecture
       - title: Backpropagation
+        url: /pages/back_propagation
       - title: Regularization
+        url: /pages/regularization_dl
       - title: Activation Functions
+        url: /pages/activation_fns
 
 - title: Convolutional Neural Networks
+  url: /pages/intro_to_cnn
   sections:
       - title: CNN Architecture
+        url: /pages/cnn_architecture
       - title: Training on a GPU
+        url: /pages/gpu
       - title: Data Generators
+        url: /pages/data_generators
       - title: Data Augmentation
+        url: /pages/data_augmentation
       - title: Transfer Learning
+        url: /pages/transfer_learning
 
 - title: Recurrent Neural Networks
+  url: /pages/intro_to_rnn
   sections:
       - title: Basic RNN
+        url: /pages/basic_rnn
       - title: LSTM
+        url: /pages/lstm
       - title: Sentiment Analysis
+        url: /pages/sentiment_analysis
       - title: Word Embeddings
+        url: /pages/word_embeddings
       - title: Time Series
+        url: /pages/time_series
 
 - title: Generative Models
+  url: /pages/generative_models
   sections:
       - title: Text Generation
+        url: /pages/text_generation
       - title: Style Transfer
+        url: /pages/style_transfer
 
 - divider: true
 
