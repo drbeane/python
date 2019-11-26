@@ -75,6 +75,8 @@ $topbar-height: 60px;
 // Stuff Robbie Beane Added
 //---------------------------------------------
 
+//Try nav.c-textbook__sidebar
+
 #js-sidebar {
   /*background-color: $color-sidebar-bg;*/
   background-color: #ecf5fe;
@@ -89,10 +91,17 @@ $topbar-height: 60px;
 }
 
 .c-sidebar__title {
-  color: #f37726;
+  color: #cccccc;
+  //color: #f37726;
   font-size: 1.2em;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.c-sidebar__chapters {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 li.c-sidebar__chapter > a {
