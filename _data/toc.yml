@@ -55,9 +55,9 @@
   expand_sections: false
   sections:
     - title: Arithmetic
-      url: /pages/arithmetic
+      url: /pages/basics_arithmetic
     - title: Variables
-      url: /pages/variables
+      url: /pages/basics_variables
     - title: Basic Data Types
       url: /pages/basic_data_types
       expand_subsections: false
