@@ -51,13 +51,23 @@
 - header: The Python Language
 
 - title: Python Basics
-  url: /pages/python_basics
+  url: /pages/basics
   expand_sections: false
   sections:
     - title: Arithmetic
       url: /pages/basics_arithmetic
     - title: Variables
       url: /pages/basics_variables
+      expand_subsections: false
+      subsections:
+      - title: Changing Values
+        url: /pages/basics_variables_values
+      - title: Variable Names
+        url: /pages/basics_variables_names
+      - title: Data Types
+        url: /pages/basics_variables_types
+
+
     - title: Basic Data Types
       url: /pages/basic_data_types
       expand_subsections: false
