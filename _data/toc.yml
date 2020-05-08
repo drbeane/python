@@ -52,13 +52,13 @@
 
 - title: Python Basics
   url: /pages/basics
-  expand_sections: true
+  expand_sections: false
   sections:
     - title: Arithmetic
       url: /pages/basics_arithmetic
     - title: Variables
       url: /pages/basics_variables
-      expand_subsections: true
+      expand_subsections: false
       subsections:
       - title: Changing Values
         url: /pages/basics_variables_values
