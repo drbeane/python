@@ -66,8 +66,6 @@
         url: /pages/basics_variables_names
       - title: Data Types
         url: /pages/basics_variables_types
-
-
     - title: Basic Data Types
       url: /pages/basic_data_types
       expand_subsections: false
