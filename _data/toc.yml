@@ -108,20 +108,20 @@
       url: /pages/error_handling
 
 - title: Functions
-  url: /pages/functions
+  url: /pages/functions/functions
   sections:
       - title: Defining Functions
-        url: /pages/defining_functions
+        url: /pages/functions/defining_functions
       - title: Parameters and Arguments
-        url: /pages/parameters_and_arguments
+        url: /pages/functions/more_on_parameters_and_arguments
       - title: Return Values
-        url: /pages/return_values
+        url: /pages/functions/return_values
       - title: Scope
-        url: /pages/scope
+        url: /pages/functions/scope
       - title: Lambda Functions
-        url: /pages/lambda_functions
+        url: /pages/functions/lambda_functions
       - title: Recursion
-        url: /pages/recursion
+        url: /pages/functions/recursion
 
 - title: Packages
   url: /pages/packages
