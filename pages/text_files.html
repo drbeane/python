@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>34. Working with Text Files &#8212; Programming with Python</title>
+    <title>Working with Text Files &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -58,7 +59,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Error Messages" href="error_messages.html" />
-    <link rel="prev" title="33. Pandas" href="pandas.html" />
+    <link rel="prev" title="Additional Topics" href="section_8.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   34. Working with Text Files
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,49 +465,49 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#opening-and-closing-files">
-   34.1. Opening and Closing Files
+   Opening and Closing Files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-mode-parameter">
-   34.2. The Mode Parameter
+   The Mode Parameter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-file-contents">
-   34.3. Reading File  Contents
+   Reading File  Contents
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#read">
-     34.3.1. read()
+     read()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#readlines">
-     34.3.2. readlines()
+     readlines()
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-with">
-   34.4. Using With
+   Using With
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#writing-to-a-file">
-   34.5. Writing to a File
+   Writing to a File
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#appending">
-   34.6. Appending
+   Appending
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processing-strings-of-text">
-   34.7. Processing Strings of Text
+   Processing Strings of Text
   </a>
  </li>
 </ul>
@@ -499,7 +522,7 @@
               <div>
                 
   <div class="section" id="working-with-text-files">
-<h1><span class="section-number">34. </span>Working with Text Files<a class="headerlink" href="#working-with-text-files" title="Permalink to this headline">¶</a></h1>
+<h1>Working with Text Files<a class="headerlink" href="#working-with-text-files" title="Permalink to this headline">¶</a></h1>
 <p>In this lesson, we will see how to use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function to open an existing text file, or to create a new text file. We will see how to read text from a file and how to write text to a file.</p>
 <p>In several of the examples we see in this lesson, we will be working with the file <code class="docutils literal notranslate"><span class="pre">my_file.txt</span></code> in the <code class="docutils literal notranslate"><span class="pre">data/</span></code> directory. This file is a text file containing the three lines of text shown below.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This is the first line. 
@@ -508,7 +531,7 @@ This is the third line.
 </pre></div>
 </div>
 <div class="section" id="opening-and-closing-files">
-<h2><span class="section-number">34.1. </span>Opening and Closing Files<a class="headerlink" href="#opening-and-closing-files" title="Permalink to this headline">¶</a></h2>
+<h2>Opening and Closing Files<a class="headerlink" href="#opening-and-closing-files" title="Permalink to this headline">¶</a></h2>
 <p>We will start by discussing how to open and close files. These tasks can be accomplished using the <code class="docutils literal notranslate"><span class="pre">open()</span></code> and <code class="docutils literal notranslate"><span class="pre">close()</span></code> functions. The <code class="docutils literal notranslate"><span class="pre">open()</span></code> function requires a parameter named <code class="docutils literal notranslate"><span class="pre">file</span></code> that is expected to be a string representing the path to a file. This function also accepts a number of optional parameters. The most important of these is <code class="docutils literal notranslate"><span class="pre">mode</span></code>, which we will consider later in the lesson.</p>
 <p>In the cell below, we open the file <code class="docutils literal notranslate"><span class="pre">my_file.txt</span></code>, storing the value returned into a variable named <code class="docutils literal notranslate"><span class="pre">fin</span></code> (which stands for file input). We then print the type of <code class="docutils literal notranslate"><span class="pre">fin</span></code>, and see that it has type <code class="docutils literal notranslate"><span class="pre">_io.TextIOWrapper</span></code>. This object does not contain the actual text from the file, but instead provides a link through which we can access the contents of the file.</p>
 <div class="cell docutils container">
@@ -571,7 +594,7 @@ This is the third line.
 </div>
 </div>
 <div class="section" id="the-mode-parameter">
-<h2><span class="section-number">34.2. </span>The Mode Parameter<a class="headerlink" href="#the-mode-parameter" title="Permalink to this headline">¶</a></h2>
+<h2>The Mode Parameter<a class="headerlink" href="#the-mode-parameter" title="Permalink to this headline">¶</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">mode</span></code> parameter to specify the time of file operations should be allowed on the file we have opened. In particular, we can use <code class="docutils literal notranslate"><span class="pre">mode</span></code> to specify if we would like for the text file to be read-only, or if writing to the file should be allowed.</p>
 <p>A list of possible values for the <code class="docutils literal notranslate"><span class="pre">mode</span></code> parameter is provided below, along with explanations of the purpose of these values.</p>
 <ul class="simple">
@@ -583,7 +606,7 @@ This is the third line.
 <p>The default value for <code class="docutils literal notranslate"><span class="pre">mode</span></code> is <code class="docutils literal notranslate"><span class="pre">r</span></code>, so if we only wish to read the contents of a file, we do not need to specify the <code class="docutils literal notranslate"><span class="pre">mode</span></code> parameter.</p>
 </div>
 <div class="section" id="reading-file-contents">
-<h2><span class="section-number">34.3. </span>Reading File  Contents<a class="headerlink" href="#reading-file-contents" title="Permalink to this headline">¶</a></h2>
+<h2>Reading File  Contents<a class="headerlink" href="#reading-file-contents" title="Permalink to this headline">¶</a></h2>
 <p>There are several tools available for reading the contents of an open file. The three most common such tools are the methods <code class="docutils literal notranslate"><span class="pre">read()</span></code>, <code class="docutils literal notranslate"><span class="pre">read_lines()</span></code>, and <code class="docutils literal notranslate"><span class="pre">read_line()</span></code>.</p>
 <ul class="simple">
 <li><p>The <strong><code class="docutils literal notranslate"><span class="pre">read()</span></code></strong> method will return a string that contains the entire content of the file.</p></li>
@@ -591,7 +614,7 @@ This is the third line.
 <li><p>The <strong><code class="docutils literal notranslate"><span class="pre">readline()</span></code></strong> method will return an iterator, each value of which will be a string representing a single line of the file.</p></li>
 </ul>
 <div class="section" id="read">
-<h3><span class="section-number">34.3.1. </span>read()<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h3>
+<h3>read()<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h3>
 <p>We will now take a look at an example of using the <code class="docutils literal notranslate"><span class="pre">read()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -659,7 +682,7 @@ This is the third line.
 </div>
 </div>
 <div class="section" id="readlines">
-<h3><span class="section-number">34.3.2. </span>readlines()<a class="headerlink" href="#readlines" title="Permalink to this headline">¶</a></h3>
+<h3>readlines()<a class="headerlink" href="#readlines" title="Permalink to this headline">¶</a></h3>
 <p>We will now explore the <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> method. In the cell below, we open the file <code class="docutils literal notranslate"><span class="pre">my_files.txt</span></code>, read its contents using <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>, and then close the file. We also dispay the results returned by <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> to confirm that this is a list of strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,7 +719,7 @@ This is the third line.
 </div>
 </div>
 <div class="section" id="using-with">
-<h2><span class="section-number">34.4. </span>Using With<a class="headerlink" href="#using-with" title="Permalink to this headline">¶</a></h2>
+<h2>Using With<a class="headerlink" href="#using-with" title="Permalink to this headline">¶</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">with</span></code> keyword to reduce the number of steps involved in working with a file. When we open a file using <code class="docutils literal notranslate"><span class="pre">with</span></code>, the file will be automatically closed when we leave the <code class="docutils literal notranslate"><span class="pre">with</span></code> block. The usage of this keyword is illustrated in the example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -716,7 +739,7 @@ This is the third line.
 </div>
 </div>
 <div class="section" id="writing-to-a-file">
-<h2><span class="section-number">34.5. </span>Writing to a File<a class="headerlink" href="#writing-to-a-file" title="Permalink to this headline">¶</a></h2>
+<h2>Writing to a File<a class="headerlink" href="#writing-to-a-file" title="Permalink to this headline">¶</a></h2>
 <p>We will see how to write to a file by setting the <code class="docutils literal notranslate"><span class="pre">mode</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">open</span></code> to <code class="docutils literal notranslate"><span class="pre">w</span></code>. When using <code class="docutils literal notranslate"><span class="pre">mode='w'</span></code>, a new file will be created if one does not already exist with the specified name. If the file does already exist, then it will be overwritten.</p>
 <p>In the cell below, we will create a file named <code class="docutils literal notranslate"><span class="pre">new_file.txt</span></code> within the <code class="docutils literal notranslate"><span class="pre">data/</span></code> folder, and will then write three lines to it.</p>
 <div class="cell docutils container">
@@ -751,7 +774,7 @@ This is the third line.
 </div>
 </div>
 <div class="section" id="appending">
-<h2><span class="section-number">34.6. </span>Appending<a class="headerlink" href="#appending" title="Permalink to this headline">¶</a></h2>
+<h2>Appending<a class="headerlink" href="#appending" title="Permalink to this headline">¶</a></h2>
 <p>If we open a file using <code class="docutils literal notranslate"><span class="pre">mode='a'</span></code>, then we can write to the end of the file. This will not delete the current content of the file, but will instead append new lines to the end of the file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -785,7 +808,7 @@ This is the fifth line.
 </div>
 </div>
 <div class="section" id="processing-strings-of-text">
-<h2><span class="section-number">34.7. </span>Processing Strings of Text<a class="headerlink" href="#processing-strings-of-text" title="Permalink to this headline">¶</a></h2>
+<h2>Processing Strings of Text<a class="headerlink" href="#processing-strings-of-text" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally, you will need to break each line of a text file up into smaller pieces called tokens. It is particularly necessary in situations in which we are reading tabular data that has been stored as a text file.</p>
 <p>In the exampe below, we will open the file <code class="docutils literal notranslate"><span class="pre">titanic.txt</span></code> and read its contents using <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>. We will then split each line into tokens, and print the contents of each line in a tabular format.</p>
 <div class="cell docutils container">
@@ -856,7 +879,7 @@ This is the fifth line.
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="pandas.html" title="previous page"><span class="section-number">33. </span>Pandas</a>
+    <a class='left-prev' id="prev-link" href="section_8.html" title="previous page">Additional Topics</a>
     <a class='right-next' id="next-link" href="error_messages.html" title="next page">Error Messages</a>
 
     </div>

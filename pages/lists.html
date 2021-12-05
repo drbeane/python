@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Lists &#8212; Programming with Python</title>
+    <title>Lists &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="14. Tuples" href="tuples.html" />
-    <link rel="prev" title="12. Additional Data Type Topics" href="addl_type_topics.html" />
+    <link rel="next" title="Tuples" href="tuples.html" />
+    <link rel="prev" title="Collections" href="section_4.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   13. Lists
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,126 +465,126 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#accessing-list-elements">
-   13.1. Accessing List Elements
+   Accessing List Elements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#types-of-list-elements">
-   13.2. Types of List Elements
+   Types of List Elements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slicing-lists">
-   13.3. Slicing Lists
+   Slicing Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-quarterly-sales">
-   13.4. Example: Quarterly Sales
+   Example: Quarterly Sales
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#altering-lists">
-   13.5. Altering Lists
+   Altering Lists
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modifying-elements-of-a-list">
-     13.5.1. Modifying elements of a list
+     Modifying elements of a list
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inserting-elements-into-a-list">
-     13.5.2. Inserting elements into a list
+     Inserting elements into a list
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#appending-elements-to-a-list">
-     13.5.3. Appending elements to a list
+     Appending elements to a list
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting-list-elements-by-index">
-     13.5.4. Deleting list elements by index
+     Deleting list elements by index
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting-list-elements-by-value">
-     13.5.5. Deleting list elements by value
+     Deleting list elements by value
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-altering-lists">
-   13.6. Example: Altering Lists
+   Example: Altering Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-concatenation-and-replication">
-   13.7. List Concatenation and Replication
+   List Concatenation and Replication
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-functions">
-   13.8. List Functions
+   List Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sorting-lists">
-   13.9. Sorting Lists
+   Sorting Lists
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorted-function">
-     13.9.1. sorted() Function
+     sorted() Function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-sort-method">
-     13.9.2. The sort() Method
+     The sort() Method
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorted-vs-sort">
-     13.9.3. sorted() vs sort()
+     sorted() vs sort()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-reverse-method">
-     13.9.4. The reverse() Method
+     The reverse() Method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#finding-index-of-list-elements">
-   13.10. Finding Index of List Elements
+   Finding Index of List Elements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#copying-lists">
-   13.11. Copying Lists
+   Copying Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-copying-and-sorting-lists">
-   13.12. Example: Copying and Sorting Lists
+   Example: Copying and Sorting Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#working-with-data-stored-in-parallel-lists">
-   13.13. Working with Data Stored in Parallel Lists
+   Working with Data Stored in Parallel Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nested-lists">
-   13.14. Nested Lists
+   Nested Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-working-with-a-list-of-lists">
-   13.15. Example: Working with a List of Lists
+   Example: Working with a List of Lists
   </a>
  </li>
 </ul>
@@ -576,7 +599,7 @@
               <div>
                 
   <div class="section" id="lists">
-<h1><span class="section-number">13. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
 <p>A <strong>list</strong> is a tool for storing a sequence of values. The individual values contained within a list are called the <strong>elements</strong> or <strong>items</strong> of the list.</p>
 <p>To define a list in Python, we write the elements of the list between a pair of square braces, separated by <a class="reference external" href="http://commas.In">commas.In</a> the cell below, we create a list containing strings representing the names of each of the eight planets in our solar system. We will store the list in the variable <code class="docutils literal notranslate"><span class="pre">planets</span></code>.</p>
 <div class="cell docutils container">
@@ -613,7 +636,7 @@
 </div>
 </div>
 <div class="section" id="accessing-list-elements">
-<h2><span class="section-number">13.1. </span>Accessing List Elements<a class="headerlink" href="#accessing-list-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Accessing List Elements<a class="headerlink" href="#accessing-list-elements" title="Permalink to this headline">¶</a></h2>
 <p>Elements in a list are assigned an order when the list is defined, and each element being assigned a numerical position called an <strong>index</strong>. The first element is assigned an index of 0, the second element is assigned an index of 1, the third element is assigned an index of 2, and so on.</p>
 <p>Assume you have a list called <code class="docutils literal notranslate"><span class="pre">my_list</span></code>, and you wish to access an element whose index is stored in a variable <code class="docutils literal notranslate"><span class="pre">i</span></code>. This can by done using the following code: <code class="docutils literal notranslate"><span class="pre">my_list[i]</span></code>.</p>
 <div class="cell docutils container">
@@ -701,7 +724,7 @@
 </div>
 </div>
 <div class="section" id="types-of-list-elements">
-<h2><span class="section-number">13.2. </span>Types of List Elements<a class="headerlink" href="#types-of-list-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Types of List Elements<a class="headerlink" href="#types-of-list-elements" title="Permalink to this headline">¶</a></h2>
 <p>While a list object is of data type <code class="docutils literal notranslate"><span class="pre">list</span></code>, the individual elements of a list will each have their own data types. For example, the elements of the elements of <code class="docutils literal notranslate"><span class="pre">planets</span></code> list we defined previously are all of type <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -745,7 +768,7 @@
 <p>In fact, it is even possible for lists to contain other lists! We will further discuss this concept soon.</p>
 </div>
 <div class="section" id="slicing-lists">
-<h2><span class="section-number">13.3. </span>Slicing Lists<a class="headerlink" href="#slicing-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Slicing Lists<a class="headerlink" href="#slicing-lists" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally, we will need to need to work with a portion of a list, rather than the entire list. <strong>Slicing</strong> is a method of creating a sublist of consecutive elements drawn from another list.
 Assume that <code class="docutils literal notranslate"><span class="pre">myList</span></code> is a Python list, and let <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> be integers.</p>
 <ul class="simple">
@@ -784,7 +807,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="example-quarterly-sales">
-<h2><span class="section-number">13.4. </span>Example: Quarterly Sales<a class="headerlink" href="#example-quarterly-sales" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Quarterly Sales<a class="headerlink" href="#example-quarterly-sales" title="Permalink to this headline">¶</a></h2>
 <p>CompCo is an company that manufactures laptop computers. The list <code class="docutils literal notranslate"><span class="pre">sales</span></code> below provides CompCo’s total monthly sales for each month of 2016, measured in US dollars. The results are listed in order of month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -826,7 +849,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="altering-lists">
-<h2><span class="section-number">13.5. </span>Altering Lists<a class="headerlink" href="#altering-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Altering Lists<a class="headerlink" href="#altering-lists" title="Permalink to this headline">¶</a></h2>
 <p>The elements of a list can be altered after the list has been created. We can make changes to the elements of a list in the following ways:</p>
 <ol class="simple">
 <li><p><strong>Updating elements</strong> We can replace the value stored at a particular index with any other value.</p></li>
@@ -844,7 +867,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="modifying-elements-of-a-list">
-<h3><span class="section-number">13.5.1. </span>Modifying elements of a list<a class="headerlink" href="#modifying-elements-of-a-list" title="Permalink to this headline">¶</a></h3>
+<h3>Modifying elements of a list<a class="headerlink" href="#modifying-elements-of-a-list" title="Permalink to this headline">¶</a></h3>
 <p>Two of the elements in our list were misspelled. We will replace these elements with correctly spelled entries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -857,7 +880,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="inserting-elements-into-a-list">
-<h3><span class="section-number">13.5.2. </span>Inserting elements into a list<a class="headerlink" href="#inserting-elements-into-a-list" title="Permalink to this headline">¶</a></h3>
+<h3>Inserting elements into a list<a class="headerlink" href="#inserting-elements-into-a-list" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">insert()</span></code> list method allows us to add elements to a list at a specified position. Any elements whose previous indices were  greater than or equal to the index of the newly inserted element will be pushed back one position.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -879,7 +902,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="appending-elements-to-a-list">
-<h3><span class="section-number">13.5.3. </span>Appending elements to a list<a class="headerlink" href="#appending-elements-to-a-list" title="Permalink to this headline">¶</a></h3>
+<h3>Appending elements to a list<a class="headerlink" href="#appending-elements-to-a-list" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">append()</span></code> method is similar to <code class="docutils literal notranslate"><span class="pre">insert()</span></code>, except that no position is specified. Appended elements are always added to the end of the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -893,7 +916,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="deleting-list-elements-by-index">
-<h3><span class="section-number">13.5.4. </span>Deleting list elements by index<a class="headerlink" href="#deleting-list-elements-by-index" title="Permalink to this headline">¶</a></h3>
+<h3>Deleting list elements by index<a class="headerlink" href="#deleting-list-elements-by-index" title="Permalink to this headline">¶</a></h3>
 <p>We may use the <code class="docutils literal notranslate"><span class="pre">del</span></code> keyword to delete the element of a list at a certain index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -917,7 +940,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="deleting-list-elements-by-value">
-<h3><span class="section-number">13.5.5. </span>Deleting list elements by value<a class="headerlink" href="#deleting-list-elements-by-value" title="Permalink to this headline">¶</a></h3>
+<h3>Deleting list elements by value<a class="headerlink" href="#deleting-list-elements-by-value" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">remove()</span></code> method will search through a list and remove the first element that matches the supplied argument. If there are multiple elements equal to the given argument, only the one with the lowest index will be deleted.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -949,7 +972,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="example-altering-lists">
-<h2><span class="section-number">13.6. </span>Example: Altering Lists<a class="headerlink" href="#example-altering-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Altering Lists<a class="headerlink" href="#example-altering-lists" title="Permalink to this headline">¶</a></h2>
 <p>A list of integers is defined in the next cell. Perform the requested tasks on this list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1008,7 +1031,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 <p>The output of the last cell should be: [14, 47, 28, 41, 20, 42, 13, 33, 6, 34]</p>
 </div>
 <div class="section" id="list-concatenation-and-replication">
-<h2><span class="section-number">13.7. </span>List Concatenation and Replication<a class="headerlink" href="#list-concatenation-and-replication" title="Permalink to this headline">¶</a></h2>
+<h2>List Concatenation and Replication<a class="headerlink" href="#list-concatenation-and-replication" title="Permalink to this headline">¶</a></h2>
 <p>As with strings, we can use the operators <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> to concatenate and replicate lists.</p>
 <ul class="simple">
 <li><p>When <code class="docutils literal notranslate"><span class="pre">+</span></code> appears between two lists, the expression will be evaluated as a new list that contains the elements from both lists. The elements in the list on the left of <code class="docutils literal notranslate"><span class="pre">+</span></code> will appear first, and the elements on the right will appear last.</p></li>
@@ -1027,7 +1050,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="list-functions">
-<h2><span class="section-number">13.8. </span>List Functions<a class="headerlink" href="#list-functions" title="Permalink to this headline">¶</a></h2>
+<h2>List Functions<a class="headerlink" href="#list-functions" title="Permalink to this headline">¶</a></h2>
 <p>Python has several functions that can take lists as inputs. We will present four such functions here.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> returns the number of items in the list.</p></li>
@@ -1081,10 +1104,10 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="sorting-lists">
-<h2><span class="section-number">13.9. </span>Sorting Lists<a class="headerlink" href="#sorting-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Sorting Lists<a class="headerlink" href="#sorting-lists" title="Permalink to this headline">¶</a></h2>
 <p>Python provides us with a few tools for sorting and reordering the elements of a list. In this section, we will discuss the following functions: the <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function, the <code class="docutils literal notranslate"><span class="pre">sort()</span></code> method, and the <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> method.</p>
 <div class="section" id="sorted-function">
-<h3><span class="section-number">13.9.1. </span>sorted() Function<a class="headerlink" href="#sorted-function" title="Permalink to this headline">¶</a></h3>
+<h3>sorted() Function<a class="headerlink" href="#sorted-function" title="Permalink to this headline">¶</a></h3>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> to obtain a sorted version of the list. Note that this does not alter the order of the original list. It creates list which contains the same elements of the original list, but in sorted order. We can then store this new list in a variable, print it, or provide it to another function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1110,7 +1133,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="the-sort-method">
-<h3><span class="section-number">13.9.2. </span>The sort() Method<a class="headerlink" href="#the-sort-method" title="Permalink to this headline">¶</a></h3>
+<h3>The sort() Method<a class="headerlink" href="#the-sort-method" title="Permalink to this headline">¶</a></h3>
 <p>As mentioned above, the <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function does not alter the order of the original list, but instead creates a new list. There are occasions when we only intend to work with a sorted version of the list, and would thus perfer to perform the sort on the original list itself, rather than creating a new list. One option would be to use <code class="docutils literal notranslate"><span class="pre">sorted()</span></code>, and then store the results back into the variable that held the original list. However, a simpler approach would be to use the <code class="docutils literal notranslate"><span class="pre">sort()</span></code> list method.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">sort()</span></code> method for lists will sort the elements of a list in ascending order. The method does not create any new lists, but instead rearranges the elements of the orignal list. This is referred to as “in place” sorting.</p>
 <div class="cell docutils container">
@@ -1134,12 +1157,12 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="sorted-vs-sort">
-<h3><span class="section-number">13.9.3. </span>sorted() vs sort()<a class="headerlink" href="#sorted-vs-sort" title="Permalink to this headline">¶</a></h3>
+<h3>sorted() vs sort()<a class="headerlink" href="#sorted-vs-sort" title="Permalink to this headline">¶</a></h3>
 <p>The fact that <code class="docutils literal notranslate"><span class="pre">sort()</span></code> performs an in-place sort while <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> creates a new list illustrates a difference between methods and lists. Methods can have permission to directly alter the value of the object that they are working on, while other types of function generally do not.</p>
 <p>You might be asking how to decide which of these sorting functions to use if you need to sort a list. The answer essentially boils down to whether or not you need to preserve the original list, or if you only intend to ever work with the sorted version of the list. If you need need to preserve the original order, then you should sort using <code class="docutils literal notranslate"><span class="pre">sorted()</span></code>. However, if don’t need the original ordering and will only work with the sorted version of the list, then you should use <code class="docutils literal notranslate"><span class="pre">sort()</span></code>.</p>
 </div>
 <div class="section" id="the-reverse-method">
-<h3><span class="section-number">13.9.4. </span>The reverse() Method<a class="headerlink" href="#the-reverse-method" title="Permalink to this headline">¶</a></h3>
+<h3>The reverse() Method<a class="headerlink" href="#the-reverse-method" title="Permalink to this headline">¶</a></h3>
 <p>Lists also have a <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> method when reverses the order of a list. This re-ordering is performed on the elements of the original list, and does not create any new lists. That is, it is done “in place”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1164,7 +1187,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="finding-index-of-list-elements">
-<h2><span class="section-number">13.10. </span>Finding Index of List Elements<a class="headerlink" href="#finding-index-of-list-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Finding Index of List Elements<a class="headerlink" href="#finding-index-of-list-elements" title="Permalink to this headline">¶</a></h2>
 <p>Lists have an <code class="docutils literal notranslate"><span class="pre">index()</span></code> method that accepts a single parameter. The method will return the index of the first occurrence of the supplied value within the list. If the value does not appear in the list, the method will produce an error.</p>
 <p>The cell below creates a randomly generate list of 30 elements. Run this cell as is.</p>
 <div class="cell docutils container">
@@ -1195,7 +1218,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="copying-lists">
-<h2><span class="section-number">13.11. </span>Copying Lists<a class="headerlink" href="#copying-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Copying Lists<a class="headerlink" href="#copying-lists" title="Permalink to this headline">¶</a></h2>
 <p>Assume that <code class="docutils literal notranslate"><span class="pre">var1</span></code> is a variables of type <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, or <code class="docutils literal notranslate"><span class="pre">bool</span></code>. We have seen before that if we create a new variable <code class="docutils literal notranslate"><span class="pre">var2</span></code> and set its initial value to be equal to that of <code class="docutils literal notranslate"><span class="pre">var1</span></code>, then <code class="docutils literal notranslate"><span class="pre">var2</span></code> will initially contain the same value as <code class="docutils literal notranslate"><span class="pre">var1</span></code>, but will be its own distinct variable whose value can be changed independent of <code class="docutils literal notranslate"><span class="pre">var1</span></code>. This is illustrated in the following two cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1281,7 +1304,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="example-copying-and-sorting-lists">
-<h2><span class="section-number">13.12. </span>Example: Copying and Sorting Lists<a class="headerlink" href="#example-copying-and-sorting-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Copying and Sorting Lists<a class="headerlink" href="#example-copying-and-sorting-lists" title="Permalink to this headline">¶</a></h2>
 <p>A list called <code class="docutils literal notranslate"><span class="pre">Avengers</span></code> is provided in the cell below. Add code to accomplish the following tasks:</p>
 <ol class="simple">
 <li><p>Create two new copies of the list, one called <code class="docutils literal notranslate"><span class="pre">Avengers_Asc</span></code> and one called <code class="docutils literal notranslate"><span class="pre">Avengers_Desc</span></code>.</p></li>
@@ -1321,7 +1344,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="working-with-data-stored-in-parallel-lists">
-<h2><span class="section-number">13.13. </span>Working with Data Stored in Parallel Lists<a class="headerlink" href="#working-with-data-stored-in-parallel-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Working with Data Stored in Parallel Lists<a class="headerlink" href="#working-with-data-stored-in-parallel-lists" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally, we will need to use multiple lists to store different types of data collected for several people or objects. When doing so, the lists are typically created so that entries of different lists at the same position provide different pieces of information all relating to the same entity.</p>
 <p>As an example, the cell below creates a list <code class="docutils literal notranslate"><span class="pre">names</span></code> that contains the names of 10 people as well as a list called <code class="docutils literal notranslate"><span class="pre">ages</span></code> that stores the ages of the same 10 people. The two lists correspond in the sense that for each index <code class="docutils literal notranslate"><span class="pre">i</span></code>, the age of the person with name <code class="docutils literal notranslate"><span class="pre">name[i]</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">age[i]</span></code>.</p>
 <div class="cell docutils container">
@@ -1363,7 +1386,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="nested-lists">
-<h2><span class="section-number">13.14. </span>Nested Lists<a class="headerlink" href="#nested-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Nested Lists<a class="headerlink" href="#nested-lists" title="Permalink to this headline">¶</a></h2>
 <p>It is possible for the elements of a list to be lists themselves. Let’s consider a simple example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1393,7 +1416,7 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
 </div>
 </div>
 <div class="section" id="example-working-with-a-list-of-lists">
-<h2><span class="section-number">13.15. </span>Example: Working with a List of Lists<a class="headerlink" href="#example-working-with-a-list-of-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Working with a List of Lists<a class="headerlink" href="#example-working-with-a-list-of-lists" title="Permalink to this headline">¶</a></h2>
 <p>In the cell below, we have created lists for 9 midwest states. Each state list contains the names of the cities in that state with a population of 100,000 or greater.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1482,8 +1505,8 @@ Assume that <code class="docutils literal notranslate"><span class="pre">myList<
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="addl_type_topics.html" title="previous page"><span class="section-number">12. </span>Additional Data Type Topics</a>
-    <a class='right-next' id="next-link" href="tuples.html" title="next page"><span class="section-number">14. </span>Tuples</a>
+    <a class='left-prev' id="prev-link" href="section_4.html" title="previous page">Collections</a>
+    <a class='right-next' id="next-link" href="tuples.html" title="next page">Tuples</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

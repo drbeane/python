@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>20. Conditional Statements &#8212; Programming with Python</title>
+    <title>Conditional Statements &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="21. Error Handling" href="error_handling.html" />
-    <link rel="prev" title="18. While Loops" href="while_loops.html" />
+    <link rel="next" title="Error Handling" href="error_handling.html" />
+    <link rel="prev" title="While Loops" href="while_loops.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   20. Conditional Statements
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,47 +465,47 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#if-else-statements">
-   20.1. If-Else Statements
+   If-Else Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#if-elif-else-statements">
-   20.2. If-Elif-Else Statements
+   If-Elif-Else Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-of-conditional-statements">
-   20.3. Examples of Conditional Statements
+   Examples of Conditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-statements-and-loops">
-   20.4. Conditional Statements and Loops
+   Conditional Statements and Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-determining-if-elements-of-a-list-are-odd-or-even">
-   20.5. Example: Determining if Elements of a List are Odd or Even
+   Example: Determining if Elements of a List are Odd or Even
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-determining-if-elements-of-a-list-are-positive-negative-or-neither">
-   20.6. Example: Determining if Elements of a List are Positive, Negative, or Neither
+   Example: Determining if Elements of a List are Positive, Negative, or Neither
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-classifying-credit-scores">
-   20.7. Example: Classifying Credit Scores
+   Example: Classifying Credit Scores
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-exam-results">
-   20.8. Example: Exam Results
+   Example: Exam Results
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditionals-and-list-comprehensions">
-   20.9. Conditionals and List Comprehensions
+   Conditionals and List Comprehensions
   </a>
  </li>
 </ul>
@@ -497,7 +520,7 @@
               <div>
                 
   <div class="section" id="conditional-statements">
-<h1><span class="section-number">20. </span>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h1>
+<h1>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h1>
 <p>We can use <strong>conditional statements</strong> to control how or if portions of our code will execute, based on logical criteria that we provide. The most basic type of conditional statement is an <strong>if statement</strong>. The syntax for an if statement is as follows:</p>
 <pre>
 if condition:
@@ -514,7 +537,7 @@ if condition:
 </div>
 </div>
 <div class="section" id="if-else-statements">
-<h2><span class="section-number">20.1. </span>If-Else Statements<a class="headerlink" href="#if-else-statements" title="Permalink to this headline">¶</a></h2>
+<h2>If-Else Statements<a class="headerlink" href="#if-else-statements" title="Permalink to this headline">¶</a></h2>
 <p>We can use an if statemnt to determine whether or not a particular set of actions will be satisfied. But we will occasionally want to use a condition to determine which of two sets of actions will be completed. This functionality is provided to us by an <strong>if-else</strong> statement. The syntax for an if-else statement is as follows:</p>
 <pre>
 if condition:
@@ -544,7 +567,7 @@ Better luck next time.
 </div>
 </div>
 <div class="section" id="if-elif-else-statements">
-<h2><span class="section-number">20.2. </span>If-Elif-Else Statements<a class="headerlink" href="#if-elif-else-statements" title="Permalink to this headline">¶</a></h2>
+<h2>If-Elif-Else Statements<a class="headerlink" href="#if-elif-else-statements" title="Permalink to this headline">¶</a></h2>
 <p>If statements allow us to determine whether or not a single set of actions will be taken, and if-else statments allow us to determine which of two sets of actions will be taken. If we require our program to select from more than two options when making a decision, we can use an <strong>if-elif-else</strong> statment. The syntax for this sort of statement is as follows:</p>
 <pre>
 if condition1:
@@ -586,10 +609,10 @@ else:
 </div>
 </div>
 <div class="section" id="examples-of-conditional-statements">
-<h2><span class="section-number">20.3. </span>Examples of Conditional Statements<a class="headerlink" href="#examples-of-conditional-statements" title="Permalink to this headline">¶</a></h2>
+<h2>Examples of Conditional Statements<a class="headerlink" href="#examples-of-conditional-statements" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="conditional-statements-and-loops">
-<h2><span class="section-number">20.4. </span>Conditional Statements and Loops<a class="headerlink" href="#conditional-statements-and-loops" title="Permalink to this headline">¶</a></h2>
+<h2>Conditional Statements and Loops<a class="headerlink" href="#conditional-statements-and-loops" title="Permalink to this headline">¶</a></h2>
 <p>We will often use if statements in conjunctions with loops. In the example below, we are provided with two lists, one that contains the names of several students, and one that contains the grades that these students got on an exam. We will loop over these lists, printing a different message for each student.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -625,7 +648,7 @@ Fred got a grade of &#39;D&#39; on the exam.
 </div>
 </div>
 <div class="section" id="example-determining-if-elements-of-a-list-are-odd-or-even">
-<h2><span class="section-number">20.5. </span>Example: Determining if Elements of a List are Odd or Even<a class="headerlink" href="#example-determining-if-elements-of-a-list-are-odd-or-even" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Determining if Elements of a List are Odd or Even<a class="headerlink" href="#example-determining-if-elements-of-a-list-are-odd-or-even" title="Permalink to this headline">¶</a></h2>
 <p>The modulus <code class="docutils literal notranslate"><span class="pre">%</span></code> is a mathematical operator that can be used to test for divisibilitiy. The expression <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code> returns the remainder of <code class="docutils literal notranslate"><span class="pre">a</span></code> after division by <code class="docutils literal notranslate"><span class="pre">b</span></code>. If that remainder is 0, then that means that <code class="docutils literal notranslate"><span class="pre">a</span></code> is divisible by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 <p>For example:</p>
 <div class="cell docutils container">
@@ -691,7 +714,7 @@ True
 </div>
 </div>
 <div class="section" id="example-determining-if-elements-of-a-list-are-positive-negative-or-neither">
-<h2><span class="section-number">20.6. </span>Example: Determining if Elements of a List are Positive, Negative, or Neither<a class="headerlink" href="#example-determining-if-elements-of-a-list-are-positive-negative-or-neither" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Determining if Elements of a List are Positive, Negative, or Neither<a class="headerlink" href="#example-determining-if-elements-of-a-list-are-positive-negative-or-neither" title="Permalink to this headline">¶</a></h2>
 <p>The cell below contains a look that will print out one of the following messages for each item in <code class="docutils literal notranslate"><span class="pre">my_list</span></code>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[x] is positive.
 [x] is negative.
@@ -728,7 +751,7 @@ True
 </div>
 </div>
 <div class="section" id="example-classifying-credit-scores">
-<h2><span class="section-number">20.7. </span>Example: Classifying Credit Scores<a class="headerlink" href="#example-classifying-credit-scores" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Classifying Credit Scores<a class="headerlink" href="#example-classifying-credit-scores" title="Permalink to this headline">¶</a></h2>
 <p>Two lists are given below. One provides a list of names. The other provides a list of credit scores associated with each of the people in the first list. Assume that credit scores are classified as follows:</p>
 <ul class="simple">
 <li><p>0 - 599 is considered “bad”.</p></li>
@@ -808,7 +831,7 @@ Fred has a good credit score.
 </div>
 </div>
 <div class="section" id="example-exam-results">
-<h2><span class="section-number">20.8. </span>Example: Exam Results<a class="headerlink" href="#example-exam-results" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Exam Results<a class="headerlink" href="#example-exam-results" title="Permalink to this headline">¶</a></h2>
 <p>In the cell below, we are provided with three lists. The list <code class="docutils literal notranslate"><span class="pre">names</span></code> contains the names of students, <code class="docutils literal notranslate"><span class="pre">grades1</span></code> contains scores for Exam 1, and <code class="docutils literal notranslate"><span class="pre">grades2</span></code> contains scores for Exam 2.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -845,10 +868,7 @@ Fred has a good credit score.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> passed exam 2, but not exam 1.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anna passed exam 2, but not exam 1.
 Beth passed both exams.
 Chad passed both exams.
 Drew failed both exams.
@@ -890,7 +910,7 @@ Fred passed both exams.
 </div>
 </div>
 <div class="section" id="conditionals-and-list-comprehensions">
-<h2><span class="section-number">20.9. </span>Conditionals and List Comprehensions<a class="headerlink" href="#conditionals-and-list-comprehensions" title="Permalink to this headline">¶</a></h2>
+<h2>Conditionals and List Comprehensions<a class="headerlink" href="#conditionals-and-list-comprehensions" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To be added later.</span>
@@ -929,8 +949,8 @@ Fred passed both exams.
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="while_loops.html" title="previous page"><span class="section-number">18. </span>While Loops</a>
-    <a class='right-next' id="next-link" href="error_handling.html" title="next page"><span class="section-number">21. </span>Error Handling</a>
+    <a class='left-prev' id="prev-link" href="while_loops.html" title="previous page">While Loops</a>
+    <a class='right-next' id="next-link" href="error_handling.html" title="next page">Error Handling</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

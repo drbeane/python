@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>18. While Loops &#8212; Programming with Python</title>
+    <title>While Loops &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="20. Conditional Statements" href="branching.html" />
-    <link rel="prev" title="17. For Loops" href="for_loops.html" />
+    <link rel="next" title="Conditional Statements" href="branching.html" />
+    <link rel="prev" title="For Loops" href="for_loops.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   18. While Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#while-examples">
-   19. While Examples
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -440,66 +463,59 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   18. While Loops
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mention-break-and-continue">
+   Mention Break and Continue
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-while-and-for-loops">
+   Comparing
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-examples">
+   While Examples
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mention-break-and-continue">
-     18.1. Mention Break and Continue
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-counting-loan-payments">
+     Example: Counting Loan Payments
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#comparing-while-and-for-loops">
-     18.2. Comparing
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       while
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       for
-      </span>
-     </code>
-     Loops
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-guessing-game">
+     Example: Guessing Game
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#while-examples">
-   19. While Examples
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation">
+   Approximation
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-counting-loan-payments">
-     19.1. Example: Counting Loan Payments
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-approximating-a-square-root">
+     Example: Approximating a Square Root
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-guessing-game">
-     19.2. Example: Guessing Game
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-estimating-pi">
+     Example: Estimating Pi
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#approximation">
-     19.3. Approximation
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-approximating-a-square-root">
-       19.3.1. Example: Approximating a Square Root
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-estimating-pi">
-       19.3.2. Example: Estimating Pi
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -515,7 +531,7 @@
               <div>
                 
   <div class="section" id="while-loops">
-<h1><span class="section-number">18. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h1>
+<h1>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h1>
 <p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is similar to a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop in that it is a tool used to automate a repetive task. The core difference between <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops is as follows:</p>
 <ul class="simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop executes a predetermined number of times. A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop that begins with <strong><code class="docutils literal notranslate"><span class="pre">&quot;for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(a,b)&quot;</span></code></strong> will execute exactly once for each value of the counter <code class="docutils literal notranslate"><span class="pre">i</span></code> that falls within the given range.</p></li>
@@ -566,10 +582,10 @@ while condition:
 </div>
 </div>
 <div class="section" id="mention-break-and-continue">
-<h2><span class="section-number">18.1. </span>Mention Break and Continue<a class="headerlink" href="#mention-break-and-continue" title="Permalink to this headline">¶</a></h2>
+<h2>Mention Break and Continue<a class="headerlink" href="#mention-break-and-continue" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="comparing-while-and-for-loops">
-<h2><span class="section-number">18.2. </span>Comparing <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#comparing-while-and-for-loops" title="Permalink to this headline">¶</a></h2>
+<h2>Comparing <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#comparing-while-and-for-loops" title="Permalink to this headline">¶</a></h2>
 <p>As it turns out, anything that can be accomplished with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop can also be done with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. However, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops require fewer lines of code than a similar <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, and are typically easier to read. So why would we ever use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop? As it turns out, <code class="docutils literal notranslate"><span class="pre">while</span></code> loops are a more flexible tool than <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. There are some tasks that we cannot accomplish with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, but can with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
 <p>When we create a for loop, we tell the loop (either explicitly, or programmatically) how many times it will run. As soon as Python encounters a statement starting with <code class="docutils literal notranslate"><span class="pre">for</span></code>, it will know how many times that the loop will execute (assuming that no errors are encountered). On the other hand, <code class="docutils literal notranslate"><span class="pre">while</span></code> loops will continue to execute for as long as some condition is true. Python does not know how many times it will execute a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop that it enounters, but it will keep doing so until the condition is no longer true. For this reason, <code class="docutils literal notranslate"><span class="pre">while</span></code> loops are well-suited for situations in which we do not know how many times the loop will need to execute, either because it would be difficult to calculate, or because the condition depends on some external factors (such as user input) that Python has no way of knowing in advance.</p>
 <p>As a somewhat superficial example, let’s say that you wanted to know the smallest positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code> for which <span class="math notranslate nohighlight">\(n^5 &gt; \left(7 n + 10 \right)^4\)</span>. If we could mathematically solve the inequality, we could get the answer, but that is certainly not easy to do. We can, however, simply start <code class="docutils literal notranslate"><span class="pre">n</span></code> at 1, and then use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to increment <code class="docutils literal notranslate"><span class="pre">n</span></code> for as long as <span class="math notranslate nohighlight">\(n^5 \leq \left(7 n + 10 \right)^4\)</span></p>
@@ -604,11 +620,10 @@ while condition:
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="while-examples">
-<h1><span class="section-number">19. </span>While Examples<a class="headerlink" href="#while-examples" title="Permalink to this headline">¶</a></h1>
+<h2>While Examples<a class="headerlink" href="#while-examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-counting-loan-payments">
-<h2><span class="section-number">19.1. </span>Example: Counting Loan Payments<a class="headerlink" href="#example-counting-loan-payments" title="Permalink to this headline">¶</a></h2>
+<h3>Example: Counting Loan Payments<a class="headerlink" href="#example-counting-loan-payments" title="Permalink to this headline">¶</a></h3>
 <p>Assume that a loan of \<span class="math notranslate nohighlight">\(225,000 is being repaid with monthly payments of \\\)</span>850, which occur at the end of the month. The loan is collecting interest at a monthly rate of 0.3%. So, at the end of each month, the remaining balance wil be multiplied by 1.003, and then \$850 is deducted from this balance. We can use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to determine the number of monthly payments required to fully repay the loan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -646,7 +661,7 @@ while condition:
 </div>
 </div>
 <div class="section" id="example-guessing-game">
-<h2><span class="section-number">19.2. </span>Example: Guessing Game<a class="headerlink" href="#example-guessing-game" title="Permalink to this headline">¶</a></h2>
+<h3>Example: Guessing Game<a class="headerlink" href="#example-guessing-game" title="Permalink to this headline">¶</a></h3>
 <p>Programs often require input from the user. Python’s <code class="docutils literal notranslate"><span class="pre">input()</span></code> function provides a method of prompting the user for input. For example, consider the following code:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>name = input(&quot;What is your name? &quot;)
 </pre></div>
@@ -666,7 +681,7 @@ while condition:
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 
-<span class="nn">~\Anaconda3\envs\Python37\lib\site-packages\ipykernel\kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">~\anaconda3\envs\Python37\lib\site-packages\ipykernel\kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
 <span class="ne">--&gt; </span><span class="mi">858</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
@@ -707,10 +722,11 @@ while condition:
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="approximation">
-<h2><span class="section-number">19.3. </span>Approximation<a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h2>
+<h2>Approximation<a class="headerlink" href="#approximation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="example-approximating-a-square-root">
-<h3><span class="section-number">19.3.1. </span>Example: Approximating a Square Root<a class="headerlink" href="#example-approximating-a-square-root" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Approximating a Square Root<a class="headerlink" href="#example-approximating-a-square-root" title="Permalink to this headline">¶</a></h3>
 <p>It is often the case in Computer science and Data Science that some value of interest is calculated by performing a sequence of better and better approximations. In these situations, we might tell our program precisely how many approximations we want it to perform (likely with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop). Alternately, we might ask our program to continue to calculate approximations until we have met some condition, such as two subsequent approximations being very near to each other.</p>
 <p>In the example below, we will approximate the square root of <code class="docutils literal notranslate"><span class="pre">K</span> <span class="pre">=</span> <span class="pre">7,341,234,543,244,549</span></code>. Our approach will be fairly simple. We will make an initial guess for the square root, which we will call <code class="docutils literal notranslate"><span class="pre">x</span></code>. We will divide <code class="docutils literal notranslate"><span class="pre">K</span></code> by <code class="docutils literal notranslate"><span class="pre">x</span></code>, naming the result <code class="docutils literal notranslate"><span class="pre">y</span></code>. If our guess was good, then <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> will be very close to each other, and thus close to the actual solution. If our guess was bad, we will set <code class="docutils literal notranslate"><span class="pre">x</span></code> to be equal to the average of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, since the true answer will have to be somewhere between these two approximations.</p>
 <p>We will continue this process until <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are within 1/10000 of each other. So that we know how many times the loop had to run, we will also create a counter <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
@@ -737,7 +753,7 @@ while condition:
 </div>
 </div>
 <div class="section" id="example-estimating-pi">
-<h3><span class="section-number">19.3.2. </span>Example: Estimating Pi<a class="headerlink" href="#example-estimating-pi" title="Permalink to this headline">¶</a></h3>
+<h3>Example: Estimating Pi<a class="headerlink" href="#example-estimating-pi" title="Permalink to this headline">¶</a></h3>
 <p>We will close with one more example drawn from the world of mathematics. It can be proven that the transcendental number <span class="math notranslate nohighlight">\(\pi\)</span> can be written as a sum of infinitely many fractions as follows:</p>
 <div class="math notranslate nohighlight">
 \[\pi = \frac{4}{1} - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \frac{4}{9} - \frac{4}{11} + ...\]</div>
@@ -798,8 +814,8 @@ while condition:
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="for_loops.html" title="previous page"><span class="section-number">17. </span>For Loops</a>
-    <a class='right-next' id="next-link" href="branching.html" title="next page"><span class="section-number">20. </span>Conditional Statements</a>
+    <a class='left-prev' id="prev-link" href="for_loops.html" title="previous page">For Loops</a>
+    <a class='right-next' id="next-link" href="branching.html" title="next page">Conditional Statements</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

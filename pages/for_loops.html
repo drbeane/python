@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>17. For Loops &#8212; Programming with Python</title>
+    <title>For Loops &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="18. While Loops" href="while_loops.html" />
-    <link rel="prev" title="16. Sets" href="sets.html" />
+    <link rel="next" title="While Loops" href="while_loops.html" />
+    <link rel="prev" title="Control Flow" href="section_5.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   17. For Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,72 +465,71 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loops">
-   17.1. Loops
+   Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   17.2. For Loops
+   For Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#looping-over-lists">
-   17.3. Looping over Lists
+   Looping over Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ranges">
-   17.4. Ranges
+   Ranges
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-loop-examples">
-   17.5. For Loop Examples
+   For Loop Examples
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sum-of-first-100-integers">
-   17.6. Sum of First 100 Integers
+   Sum of First 100 Integers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sum-of-square-of-first-100-integers">
-   17.7. Sum of Square of First 100 Integers
+   Sum of Square of First 100 Integers
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sum-of-squares-of-elements-in-a-list">
-   17.8. Sum of Squares of Elements in a List
+   Sum of Squares of Elements in a List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pairwise-sum">
-   17.9. Pairwise Sum
+   Pairwise Sum
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#something-involving-strings">
-   17.10. Something involving Strings
+   Something involving Strings
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-loops-to-work-with-lists">
-   17.11. Using Loops to Work with Lists
+   Using Loops to Work with Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nested-loops">
-   17.12. Nested Loops
+   Nested Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-matrix-addition">
-   17.13. Example: Matrix Addition
+   Example: Matrix Addition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#enumerate">
-   17.14.
    <code class="docutils literal notranslate">
     <span class="pre">
      enumerate()
@@ -517,7 +539,6 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#zip">
-   17.15.
    <code class="docutils literal notranslate">
     <span class="pre">
      zip()
@@ -527,17 +548,16 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-comprehensions">
-   17.16. List Comprehensions
+   List Comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionary-comprehensions">
-   17.17. Dictionary Comprehensions
+   Dictionary Comprehensions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#break-and-continue">
-   17.18.
    <code class="docutils literal notranslate">
     <span class="pre">
      break
@@ -563,14 +583,14 @@
               <div>
                 
   <div class="section" id="for-loops">
-<h1><span class="section-number">17. </span>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h1>
+<h1>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="loops">
-<h2><span class="section-number">17.1. </span>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
+<h2>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
 <p>A loop is a tool that allows us to instruct Python to repeat a task several times, usually with slight variations each time. We will consider two types of loops in this course: for loops and while loops.</p>
 <p>We will begin with for loops, but before we can do so, we need to introduce the concept of a range.</p>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">17.2. </span>For Loops<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>For Loops<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>We can use for loops to ask Python to repeat a task a certain number of times. The syntax for constructing a for loop is as follows:</p>
 <pre>
 for i in range(a,b): 
@@ -579,7 +599,7 @@ for i in range(a,b):
 <p>This code asks Python to execute the body of the for loop 5 times - once for each integer in the specified range. The variable <code class="docutils literal notranslate"><span class="pre">i</span></code> is referred to as a <strong>loop counter</strong>. The counter will have a value of <code class="docutils literal notranslate"><span class="pre">a</span></code> during the first iteration of the loop, and will increment at the start of each new iteration.</p>
 </div>
 <div class="section" id="looping-over-lists">
-<h2><span class="section-number">17.3. </span>Looping over Lists<a class="headerlink" href="#looping-over-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Looping over Lists<a class="headerlink" href="#looping-over-lists" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alex&#39;</span><span class="p">,</span> <span class="s1">&#39;Beth&#39;</span><span class="p">,</span> <span class="s1">&#39;Chad&#39;</span><span class="p">,</span> <span class="s1">&#39;Drew&#39;</span><span class="p">,</span> <span class="s1">&#39;Emma&#39;</span><span class="p">]</span>
@@ -601,7 +621,7 @@ Hello, Emma!
 </div>
 </div>
 <div class="section" id="ranges">
-<h2><span class="section-number">17.4. </span>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h2>
+<h2>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">range(a,</span> <span class="pre">b)</span></code> function generates a list of integers beginning with <code class="docutils literal notranslate"><span class="pre">a</span></code> and continuing up to, but <strong>NOT INCLUDING</strong> <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 <p>A range is not a list, but can be converted into a list.</p>
 <div class="cell docutils container">
@@ -716,10 +736,10 @@ The square of 10 is 100.
 </div>
 </div>
 <div class="section" id="for-loop-examples">
-<h2><span class="section-number">17.5. </span>For Loop Examples<a class="headerlink" href="#for-loop-examples" title="Permalink to this headline">¶</a></h2>
+<h2>For Loop Examples<a class="headerlink" href="#for-loop-examples" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="sum-of-first-100-integers">
-<h2><span class="section-number">17.6. </span>Sum of First 100 Integers<a class="headerlink" href="#sum-of-first-100-integers" title="Permalink to this headline">¶</a></h2>
+<h2>Sum of First 100 Integers<a class="headerlink" href="#sum-of-first-100-integers" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># using range</span>
@@ -746,7 +766,7 @@ The square of 10 is 100.
 </div>
 </div>
 <div class="section" id="sum-of-square-of-first-100-integers">
-<h2><span class="section-number">17.7. </span>Sum of Square of First 100 Integers<a class="headerlink" href="#sum-of-square-of-first-100-integers" title="Permalink to this headline">¶</a></h2>
+<h2>Sum of Square of First 100 Integers<a class="headerlink" href="#sum-of-square-of-first-100-integers" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using range</span>
@@ -756,7 +776,7 @@ The square of 10 is 100.
 </div>
 </div>
 <div class="section" id="sum-of-squares-of-elements-in-a-list">
-<h2><span class="section-number">17.8. </span>Sum of Squares of Elements in a List<a class="headerlink" href="#sum-of-squares-of-elements-in-a-list" title="Permalink to this headline">¶</a></h2>
+<h2>Sum of Squares of Elements in a List<a class="headerlink" href="#sum-of-squares-of-elements-in-a-list" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using range(len(...))</span>
@@ -768,7 +788,7 @@ The square of 10 is 100.
 </div>
 </div>
 <div class="section" id="pairwise-sum">
-<h2><span class="section-number">17.9. </span>Pairwise Sum<a class="headerlink" href="#pairwise-sum" title="Permalink to this headline">¶</a></h2>
+<h2>Pairwise Sum<a class="headerlink" href="#pairwise-sum" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using range</span>
@@ -778,10 +798,10 @@ The square of 10 is 100.
 </div>
 </div>
 <div class="section" id="something-involving-strings">
-<h2><span class="section-number">17.10. </span>Something involving Strings<a class="headerlink" href="#something-involving-strings" title="Permalink to this headline">¶</a></h2>
+<h2>Something involving Strings<a class="headerlink" href="#something-involving-strings" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="using-loops-to-work-with-lists">
-<h2><span class="section-number">17.11. </span>Using Loops to Work with Lists<a class="headerlink" href="#using-loops-to-work-with-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Using Loops to Work with Lists<a class="headerlink" href="#using-loops-to-work-with-lists" title="Permalink to this headline">¶</a></h2>
 <p>One common use of a loop is to perform an action on every element of a list. In this case, we typically use the loop counter as an index for elements in the list.</p>
 <p>The list below contains 30 integer values, several of which are negative.</p>
 <div class="cell docutils container">
@@ -840,14 +860,11 @@ The square of 10 is 100.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[55, 32, 54, 81, 67, 70, 83, 53, 72, 66, 46, 60, 57, 60, 46, 78, 75, 59, 40, 30]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
 <div class="section" id="nested-loops">
-<h2><span class="section-number">17.12. </span>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">¶</a></h2>
+<h2>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">¶</a></h2>
 <p>For some complex tasks, it is necessary to include loops inside of other loops. This is called a <strong>nested loop</strong>. The simplest case of a nested loops is when we have one loop that itself contains another loop. In this case, we call the first loop that Python encounters the <strong>outer loop</strong>, and the loop inside of that is called the <strong>inner loop</strong>. Each time the outer loop runs, the entire inner loop will process, running through all of it’s possible iterations.</p>
 <p>To get an introduction to how nested loops work, consider the following example.</p>
 <div class="cell docutils container">
@@ -892,7 +909,7 @@ i is equal to 5; j is equal to 2
 </div>
 </div>
 <div class="section" id="example-matrix-addition">
-<h2><span class="section-number">17.13. </span>Example: Matrix Addition<a class="headerlink" href="#example-matrix-addition" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Matrix Addition<a class="headerlink" href="#example-matrix-addition" title="Permalink to this headline">¶</a></h2>
 <p>The following cell contains a list of lists, named <code class="docutils literal notranslate"><span class="pre">A</span></code>. This list is intended to represent a 3x5 matrix. Each of the three lists inside <code class="docutils literal notranslate"><span class="pre">A</span></code> represents a single row with 5 elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -951,7 +968,7 @@ i is equal to 5; j is equal to 2
 </div>
 </div>
 <div class="section" id="enumerate">
-<h2><span class="section-number">17.14. </span><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code><a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code><a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># to be added</span>
@@ -961,7 +978,7 @@ i is equal to 5; j is equal to 2
 </div>
 </div>
 <div class="section" id="zip">
-<h2><span class="section-number">17.15. </span><code class="docutils literal notranslate"><span class="pre">zip()</span></code><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">zip()</span></code><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># to be added</span>
@@ -971,7 +988,7 @@ i is equal to 5; j is equal to 2
 </div>
 </div>
 <div class="section" id="list-comprehensions">
-<h2><span class="section-number">17.16. </span>List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h2>
+<h2>List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h2>
 <p>Python creates a shortcut for iteratively creating lists. This shortcut is called a <strong>list comprehension</strong>. We know that we can create a list iteratively using a for loop as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>my_list = []
 for i in range(a,b):
@@ -1023,10 +1040,10 @@ for i in range(a,b):
 </div>
 </div>
 <div class="section" id="dictionary-comprehensions">
-<h2><span class="section-number">17.17. </span>Dictionary Comprehensions<a class="headerlink" href="#dictionary-comprehensions" title="Permalink to this headline">¶</a></h2>
+<h2>Dictionary Comprehensions<a class="headerlink" href="#dictionary-comprehensions" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="break-and-continue">
-<h2><span class="section-number">17.18. </span><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># to be added</span>
@@ -1065,8 +1082,8 @@ for i in range(a,b):
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="sets.html" title="previous page"><span class="section-number">16. </span>Sets</a>
-    <a class='right-next' id="next-link" href="while_loops.html" title="next page"><span class="section-number">18. </span>While Loops</a>
+    <a class='left-prev' id="prev-link" href="section_5.html" title="previous page">Control Flow</a>
+    <a class='right-next' id="next-link" href="while_loops.html" title="next page">While Loops</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

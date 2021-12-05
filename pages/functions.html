@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>22. Functions &#8212; Programming with Python</title>
+    <title>Functions &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="23. Variable Scope" href="scope.html" />
-    <link rel="prev" title="21. Error Handling" href="error_handling.html" />
+    <link rel="next" title="Variable Scope" href="scope.html" />
+    <link rel="prev" title="Functions and Classes" href="section_6.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   22. Functions
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="classes.html">
-   25. Classes
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,57 +465,57 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#provide-overview-and-simple-examples-of-what-is-to-come">
-   22.1. Provide overview and simple examples of what is to come.
+   Provide overview and simple examples of what is to come.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parameters-and-arguments">
-   22.2. Parameters and Arguments
+   Parameters and Arguments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#return-values">
-   22.3. Return Values
+   Return Values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiple-return-statements">
-   22.4. Multiple Return Statements
+   Multiple Return Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#default-parameter-values">
-   22.5. Default Parameter Values
+   Default Parameter Values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#returning-multiple-values">
-   22.6. Returning Multiple Values
+   Returning Multiple Values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-division-with-remainder">
-   22.7. Example: Division with Remainder
+   Example: Division with Remainder
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-locating-elements-in-a-list">
-   22.8. Example: Locating Elements in a List
+   Example: Locating Elements in a List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-of-functions">
-   22.9. Examples of Functions
+   Examples of Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-reporting-the-square-of-a-number">
-   22.10. Example: Reporting the Square of a Number
+   Example: Reporting the Square of a Number
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-summing-the-first-n-positive-integers">
-   22.11. Example: Summing the First
+   Example: Summing the First
    <code class="docutils literal notranslate">
     <span class="pre">
      n
@@ -503,12 +526,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-factorials">
-   22.12. Example: Factorials
+   Example: Factorials
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-sum-power-function">
-   22.13. Example:
+   Example:
    <code class="docutils literal notranslate">
     <span class="pre">
      sum_power
@@ -519,7 +542,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-find-item-function">
-   22.14. Example:
+   Example:
    <code class="docutils literal notranslate">
     <span class="pre">
      find_item
@@ -530,12 +553,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   22.15. Example: Division with Remainder
+   Example: Division with Remainder
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   22.16. Example: Locating Elements in a List
+   Example: Locating Elements in a List
   </a>
  </li>
 </ul>
@@ -550,7 +573,7 @@
               <div>
                 
   <div class="section" id="functions">
-<h1><span class="section-number">22. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
 <p>A <strong>function</strong> is a sequence of instructions that has been given a name. Functions usually (but not always) take some number of inputs, called <strong>parameters</strong>, and usually (but not always) give an output, called the <strong>return value</strong>. When we use a function in our code, we say that we are <strong>calling</strong> the function.</p>
 <p>Once a function has been defined, it can be called from anywhere within your program. If you find that there is a task that you are repeating often and that requires several lines of codes, it might be a good idea to group those lines of code together into a function.</p>
 <p>Most functions we write will accept one or more inputs and will generate an output. However, We will start by considering functions that do not accept inputs, and that do not provide outputs. The syntax for defining such a function is as follows:</p>
@@ -598,14 +621,14 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="provide-overview-and-simple-examples-of-what-is-to-come">
-<h2><span class="section-number">22.1. </span>Provide overview and simple examples of what is to come.<a class="headerlink" href="#provide-overview-and-simple-examples-of-what-is-to-come" title="Permalink to this headline">¶</a></h2>
+<h2>Provide overview and simple examples of what is to come.<a class="headerlink" href="#provide-overview-and-simple-examples-of-what-is-to-come" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Parameters and arguments</p></li>
 <li><p>Return values</p></li>
 </ul>
 </div>
 <div class="section" id="parameters-and-arguments">
-<h2><span class="section-number">22.2. </span>Parameters and Arguments<a class="headerlink" href="#parameters-and-arguments" title="Permalink to this headline">¶</a></h2>
+<h2>Parameters and Arguments<a class="headerlink" href="#parameters-and-arguments" title="Permalink to this headline">¶</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">greeting()</span></code> defined above is not vary useful, for a few reasons. In particular, it doesn’t accept any inputs. There are occassions when you will want to write functions that take no inputs, but functions are generally more useful when we are able to supply them information that affects how they behave.</p>
 <p>When defining a function, we can specify that a function expects one or more inputs by listing variable names between the parentheses to serve as placeholders for the inputs. The placeholders themselves are called <strong>parameters</strong>, and specific values that are supplied as inputs are referred to as <strong>arguments</strong>.</p>
 <p>In the example below, we create a function <code class="docutils literal notranslate"><span class="pre">square()</span></code> that has a single parameter, denoted by <code class="docutils literal notranslate"><span class="pre">n</span></code>. When the function is called, an argument must be supplied as a value for this parameter. The function will then print the square of that argument.</p>
@@ -679,7 +702,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="return-values">
-<h2><span class="section-number">22.3. </span>Return Values<a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
+<h2>Return Values<a class="headerlink" href="#return-values" title="Permalink to this headline">¶</a></h2>
 <p>All of the function we have written so far have printed some sort of message. However, we will not always desire this sort of behavior. Most of the pre-defined functions we have seen in this course print nothing at all, but instead provide some sort of output that can be printed, or stored into a variable.</p>
 <p>For example, the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> function takes a list as an input, and provides the sum of the values in the list as the output. When a function provides an output, that output is called a <strong>return value</strong>.</p>
 <p>The syntax for defining a function with a return value is as follows:</p>
@@ -732,7 +755,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="multiple-return-statements">
-<h2><span class="section-number">22.4. </span>Multiple Return Statements<a class="headerlink" href="#multiple-return-statements" title="Permalink to this headline">¶</a></h2>
+<h2>Multiple Return Statements<a class="headerlink" href="#multiple-return-statements" title="Permalink to this headline">¶</a></h2>
 <p>It is possible for a function to have multiple return statements. As soon as a return statement is hit, however, the function returns that value and then exits. As an illustration of this idea, compare the following two functions, both of which return the absolute value of a number.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -776,7 +799,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="default-parameter-values">
-<h2><span class="section-number">22.5. </span>Default Parameter Values<a class="headerlink" href="#default-parameter-values" title="Permalink to this headline">¶</a></h2>
+<h2>Default Parameter Values<a class="headerlink" href="#default-parameter-values" title="Permalink to this headline">¶</a></h2>
 <p>It is sometimes useful to assign a default value to a parameter. This can be done by setting the parameter equal to the desired default value in the function definition. When the function is called, if an argument is supplied for this parameter, it will override the default value. If no argument is supplied for a parameter with a default value, then the default will be used.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,7 +848,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="returning-multiple-values">
-<h2><span class="section-number">22.6. </span>Returning Multiple Values<a class="headerlink" href="#returning-multiple-values" title="Permalink to this headline">¶</a></h2>
+<h2>Returning Multiple Values<a class="headerlink" href="#returning-multiple-values" title="Permalink to this headline">¶</a></h2>
 <p>It is possible for a Python function to return multiple values. To To accomplish this, we can combine the desired return values together into a list or a tuple, which we then return. Alternately, we can simply list the return values in the return statement, separated by commas.</p>
 <p>When storing the values returned by such a function in variables, we can list the target variable names on the left of the assignment operator, separated by commas.</p>
 <div class="cell docutils container">
@@ -842,7 +865,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-division-with-remainder">
-<h2><span class="section-number">22.7. </span>Example: Division with Remainder<a class="headerlink" href="#example-division-with-remainder" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Division with Remainder<a class="headerlink" href="#example-division-with-remainder" title="Permalink to this headline">¶</a></h2>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">div_w_remainder()</span></code> that takes two arguments, <code class="docutils literal notranslate"><span class="pre">num</span></code> and <code class="docutils literal notranslate"><span class="pre">div</span></code>, and returns the number of times that <code class="docutils literal notranslate"><span class="pre">div</span></code> evenly divides <code class="docutils literal notranslate"><span class="pre">num</span></code> (i.e. the quotient), as well as the remainder of <code class="docutils literal notranslate"><span class="pre">num</span></code> after division by <code class="docutils literal notranslate"><span class="pre">div</span></code>. Coerce the remainder into an integer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -886,7 +909,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-locating-elements-in-a-list">
-<h2><span class="section-number">22.8. </span>Example: Locating Elements in a List<a class="headerlink" href="#example-locating-elements-in-a-list" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Locating Elements in a List<a class="headerlink" href="#example-locating-elements-in-a-list" title="Permalink to this headline">¶</a></h2>
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">locate</span></code>. The function should take two arguments: a list called <code class="docutils literal notranslate"><span class="pre">x</span></code>, and another variable called <code class="docutils literal notranslate"><span class="pre">item</span></code>.</p>
 <p>The function should return two values: A list of indices at which the element in <code class="docutils literal notranslate"><span class="pre">x</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">item</span></code>, and a count of the number of times that <code class="docutils literal notranslate"><span class="pre">item</span></code> appears in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <div class="cell docutils container">
@@ -923,10 +946,10 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="examples-of-functions">
-<h2><span class="section-number">22.9. </span>Examples of Functions<a class="headerlink" href="#examples-of-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Examples of Functions<a class="headerlink" href="#examples-of-functions" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="example-reporting-the-square-of-a-number">
-<h2><span class="section-number">22.10. </span>Example: Reporting the Square of a Number<a class="headerlink" href="#example-reporting-the-square-of-a-number" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Reporting the Square of a Number<a class="headerlink" href="#example-reporting-the-square-of-a-number" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we will write a function called <code class="docutils literal notranslate"><span class="pre">square_message()</span></code>. The function should take one argument, <code class="docutils literal notranslate"><span class="pre">n</span></code>, and should print the message:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The square of [n] is [n**2].
 </pre></div>
@@ -952,7 +975,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-summing-the-first-n-positive-integers">
-<h2><span class="section-number">22.11. </span>Example: Summing the First <code class="docutils literal notranslate"><span class="pre">n</span></code> Positive Integers<a class="headerlink" href="#example-summing-the-first-n-positive-integers" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Summing the First <code class="docutils literal notranslate"><span class="pre">n</span></code> Positive Integers<a class="headerlink" href="#example-summing-the-first-n-positive-integers" title="Permalink to this headline">¶</a></h2>
 <p>In the following cell, we write a function called <code class="docutils literal notranslate"><span class="pre">sum_first()</span></code> that takes a single parameter <code class="docutils literal notranslate"><span class="pre">n</span></code>, and returns the sum of the first n positive integers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -979,7 +1002,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-factorials">
-<h2><span class="section-number">22.12. </span>Example: Factorials<a class="headerlink" href="#example-factorials" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Factorials<a class="headerlink" href="#example-factorials" title="Permalink to this headline">¶</a></h2>
 <p>We will now write a function called <code class="docutils literal notranslate"><span class="pre">fact()</span></code> that takes in one argument, assumed to be an integer, and returns the factorial of that integer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1008,7 +1031,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-sum-power-function">
-<h2><span class="section-number">22.13. </span>Example: <code class="docutils literal notranslate"><span class="pre">sum_power</span></code> Function<a class="headerlink" href="#example-sum-power-function" title="Permalink to this headline">¶</a></h2>
+<h2>Example: <code class="docutils literal notranslate"><span class="pre">sum_power</span></code> Function<a class="headerlink" href="#example-sum-power-function" title="Permalink to this headline">¶</a></h2>
 <p>In the cell below, we create a function called <code class="docutils literal notranslate"><span class="pre">sum_power</span></code>. The function has two parameters, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code>. The parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> is intended to be a list. The parameter <code class="docutils literal notranslate"><span class="pre">n</span></code> should be an <code class="docutils literal notranslate"><span class="pre">int</span></code> with a default value of <code class="docutils literal notranslate"><span class="pre">1</span></code>. The function should raise each element to the power of <code class="docutils literal notranslate"><span class="pre">n</span></code>, sum the resulting values, and then return this sum.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1037,7 +1060,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="example-find-item-function">
-<h2><span class="section-number">22.14. </span>Example: <code class="docutils literal notranslate"><span class="pre">find_item</span></code> Function<a class="headerlink" href="#example-find-item-function" title="Permalink to this headline">¶</a></h2>
+<h2>Example: <code class="docutils literal notranslate"><span class="pre">find_item</span></code> Function<a class="headerlink" href="#example-find-item-function" title="Permalink to this headline">¶</a></h2>
 <p>In the cell below, we define a function called <code class="docutils literal notranslate"><span class="pre">find_item</span></code> that has three parameters, <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">item</span></code>, and <code class="docutils literal notranslate"><span class="pre">first</span></code>. The parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> is expected to be a list. The parameter <code class="docutils literal notranslate"><span class="pre">first</span></code> should have a default value of <code class="docutils literal notranslate"><span class="pre">True</span></code>. The function should behave as follows:</p>
 <ul class="simple">
 <li><p>If <code class="docutils literal notranslate"><span class="pre">first</span> <span class="pre">==</span> <span class="pre">True</span></code>, then the function should search for the first time that <code class="docutils literal notranslate"><span class="pre">item</span></code> appears in <code class="docutils literal notranslate"><span class="pre">x</span></code>, and should return the index of that occurrence.</p></li>
@@ -1075,7 +1098,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">22.15. </span>Example: Division with Remainder<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Division with Remainder<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">div_w_remainder()</span></code> that takes two arguments, <code class="docutils literal notranslate"><span class="pre">num</span></code> and <code class="docutils literal notranslate"><span class="pre">div</span></code>, and returns the number of times that <code class="docutils literal notranslate"><span class="pre">div</span></code> evenly divides <code class="docutils literal notranslate"><span class="pre">num</span></code> (i.e. the quotient), as well as the remainder of <code class="docutils literal notranslate"><span class="pre">num</span></code> after division by <code class="docutils literal notranslate"><span class="pre">div</span></code>. Coerce the remainder into an integer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1119,7 +1142,7 @@ Hello, world!
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">22.16. </span>Example: Locating Elements in a List<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Example: Locating Elements in a List<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">locate</span></code>. The function should take two arguments: a list called <code class="docutils literal notranslate"><span class="pre">x</span></code>, and another variable called <code class="docutils literal notranslate"><span class="pre">item</span></code>.</p>
 <p>The function should return two values: A list of indices at which the element in <code class="docutils literal notranslate"><span class="pre">x</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">item</span></code>, and a count of the number of times that <code class="docutils literal notranslate"><span class="pre">item</span></code> appears in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <div class="cell docutils container">
@@ -1185,8 +1208,8 @@ Hello, world!
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="error_handling.html" title="previous page"><span class="section-number">21. </span>Error Handling</a>
-    <a class='right-next' id="next-link" href="scope.html" title="next page"><span class="section-number">23. </span>Variable Scope</a>
+    <a class='left-prev' id="prev-link" href="section_6.html" title="previous page">Functions and Classes</a>
+    <a class='right-next' id="next-link" href="scope.html" title="next page">Variable Scope</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

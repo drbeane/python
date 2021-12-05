@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>25. Classes &#8212; Programming with Python</title>
+    <title>Classes &#8212; Python Programming</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -57,8 +58,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="26. Packages" href="packages.html" />
-    <link rel="prev" title="24. Recursion" href="recursion.html" />
+    <link rel="next" title="Packages" href="section_7.html" />
+    <link rel="prev" title="Recursion" href="recursion.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -80,7 +81,7 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Programming with Python</h1>
+  <h1 class="site-logo" id="site-title">Python Programming</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -91,234 +92,251 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../about.html">
-   Welcome to Python for Data Science
+   Welcome to Python Programming
   </a>
  </li>
 </ul>
 <p class="caption collapsible-parent">
  <span class="caption-text">
-  Getting Started
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_programming.html">
-   1. Introduction to Programming
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="history.html">
-   2. Python History
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="anaconda.html">
-   3. Anaconda Distribution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_jupyter.html">
-   4. Introduction to Jupyter
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro_python.html">
-   5. Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arithmetic.html">
-   6. Arithmetic Operations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
-   7. Variables
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Basic Data Types
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="numeric_data_types.html">
-   8. Numeric Data Types
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   9. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html">
-   10. Boolean Values
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="booleans.html#comparison-operators">
-   11. Comparison Operators
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="addl_type_topics.html">
-   12. Additional Data Type Topics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Collections
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="lists.html">
-   13. Lists
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tuples.html">
-   14. Tuples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="dictionaries.html">
-   15. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sets.html">
-   16. Sets
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Control Flow
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="for_loops.html">
-   17. For Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html">
-   18. While Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while_loops.html#while-examples">
-   19. While Examples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="branching.html">
-   20. Conditional Statements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="error_handling.html">
-   21. Error Handling
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Functions and Classes
+  Content
  </span>
 </p>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="functions.html">
-   22. Functions
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_1.html">
+   1. Getting Started
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_programming.html">
+     Introduction to Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="history.html">
+     Python History
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="anaconda.html">
+     Anaconda Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_jupyter.html">
+     Introduction to Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scope.html">
-   23. Variable Scope
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_2.html">
+   2. Python Basics
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_python.html">
+     Introduction to Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arithmetic.html">
+     Arithmetic Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="recursion.html">
-   24. Recursion
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_3.html">
+   3. Basic Data Types
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric_data_types.html">
+     Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="strings.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="booleans.html">
+     Boolean Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="addl_type_topics.html">
+     Additional Data Type Topics
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   25. Classes
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_4.html">
+   4. Collections
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lists.html">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tuples.html">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dictionaries.html">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets.html">
+     Sets
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Packages
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="packages.html">
-   26. Packages
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_5.html">
+   5. Control Flow
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loops.html">
+     For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="while_loops.html">
+     While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="branching.html">
+     Conditional Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="error_handling.html">
+     Error Handling
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="math.html">
-   27. Math
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="section_6.html">
+   6. Functions and Classes
   </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     Variable Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="recursion.html">
+     Recursion
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Classes
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="time.html">
-   28. Time
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_7.html">
+   7. Packages
   </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="packages.html">
+     Packages
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="math.html">
+       Math
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="time.html">
+       Time
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="os.html">
+       OS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="shutil.html">
+       Shutil
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zipfile.html">
+       ZipFile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="numpy.html">
+       NumPy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pandas.html">
+       Pandas
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="os.html">
-   29. OS
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="section_8.html">
+   8. Additional Topics
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="shutil.html">
-   30. Shutil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zipfile.html">
-   31. ZipFile
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="numpy.html">
-   32. NumPy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pandas.html">
-   33. Pandas
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Additional Topics
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="text_files.html">
-   34. Working with Text Files
-  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="text_files.html">
+     Working with Text Files
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
 </ul>
 <p class="caption collapsible-parent">
@@ -335,6 +353,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="glossary.html">
    Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../author.html">
+   About the Author
   </a>
  </li>
 </ul>
@@ -442,59 +465,59 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#circle-class-version-1">
-   25.1. Circle Class: Version 1
+   Circle Class: Version 1
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-instances-of-a-class">
-     25.1.1. Creating Instances of a Class
+     Creating Instances of a Class
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#changing-attribute-values">
-     25.1.2. Changing Attribute Values
+     Changing Attribute Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-multiple-instances">
-     25.1.3. Creating Multiple Instances
+     Creating Multiple Instances
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#circle-class-version-2">
-   25.2. Circle Class: Version 2
+   Circle Class: Version 2
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#constructors">
-     25.2.1. Constructors
+     Constructors
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#circle-class-version-3">
-     25.2.2. Circle Class: Version 3
+     Circle Class: Version 3
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-contains-method">
-       25.2.2.1. The contains() Method
+       The contains() Method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-intersect-method">
-       25.2.2.2. The intersect() Method
+       The intersect() Method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-copy-method">
-       25.2.2.3. The copy() Method
+       The copy() Method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-str-method">
-       25.2.2.4. The
+       The
        <code class="docutils literal notranslate">
         <span class="pre">
          __str__()
@@ -509,7 +532,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#application-sensor-network">
-   25.3. Application: Sensor Network
+   Application: Sensor Network
   </a>
  </li>
 </ul>
@@ -524,11 +547,11 @@
               <div>
                 
   <div class="section" id="classes">
-<h1><span class="section-number">25. </span>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
+<h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
 <p>A <strong>class</strong> is a programmer-defined data type. Python and its external packages contain many useful data types, but classes allow a programmer to create custom data types that are tailored to specific use-cases. Classes can contain functions, called <strong>methods</strong> as well as variables, called <strong>attributes</strong>. Classes are defined using the <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword.</p>
 <p>In this lesson, we will create a simple class called <code class="docutils literal notranslate"><span class="pre">circle</span></code>. Objects of this data type are intended to represent geometric circles. We will define our circle class in steps. At each step, our class will become slightly more complex.</p>
 <div class="section" id="circle-class-version-1">
-<h2><span class="section-number">25.1. </span>Circle Class: Version 1<a class="headerlink" href="#circle-class-version-1" title="Permalink to this headline">¶</a></h2>
+<h2>Circle Class: Version 1<a class="headerlink" href="#circle-class-version-1" title="Permalink to this headline">¶</a></h2>
 <p>We will start will a very basic version that contains three attributes, <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, and <code class="docutils literal notranslate"><span class="pre">y</span></code>. The attribute <code class="docutils literal notranslate"><span class="pre">r</span></code> is intended to store the radius of the circle, while <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> store the coordinates of the circle’s center point. Our class will also contain a single method, called <code class="docutils literal notranslate"><span class="pre">area</span></code>. This will return the area of the circle, rounded to two decimal places.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -549,7 +572,7 @@
 </div>
 <p>Notice the references to the parameter <code class="docutils literal notranslate"><span class="pre">self</span></code> in the <code class="docutils literal notranslate"><span class="pre">area</span></code> method. This will refer to the instance of <code class="docutils literal notranslate"><span class="pre">circle</span></code> from which the <code class="docutils literal notranslate"><span class="pre">area</span></code> method is called. We will say more about this in a moment.</p>
 <div class="section" id="creating-instances-of-a-class">
-<h3><span class="section-number">25.1.1. </span>Creating Instances of a Class<a class="headerlink" href="#creating-instances-of-a-class" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Instances of a Class<a class="headerlink" href="#creating-instances-of-a-class" title="Permalink to this headline">¶</a></h3>
 <p>A class is simply a template. Defining a class does not create any instances of that type. We will now create an instance of our <code class="docutils literal notranslate"><span class="pre">circle</span></code> class, storing it in a variable named <code class="docutils literal notranslate"><span class="pre">c1</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -597,7 +620,7 @@ c1 center: (0,0)
 <p>Every method within a class should have a <code class="docutils literal notranslate"><span class="pre">self</span></code> parameter that appears first within the parameter list. And <code class="docutils literal notranslate"><span class="pre">self</span></code> will always refer to the class instance from which the method was called.</p>
 </div>
 <div class="section" id="changing-attribute-values">
-<h3><span class="section-number">25.1.2. </span>Changing Attribute Values<a class="headerlink" href="#changing-attribute-values" title="Permalink to this headline">¶</a></h3>
+<h3>Changing Attribute Values<a class="headerlink" href="#changing-attribute-values" title="Permalink to this headline">¶</a></h3>
 <p>Our circle <code class="docutils literal notranslate"><span class="pre">c1</span></code> has the default radius of <code class="docutils literal notranslate"><span class="pre">5</span></code>. We can change this by directly changing the value of <code class="docutils literal notranslate"><span class="pre">c1.r</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -614,7 +637,7 @@ c1 center: (0,0)
 </div>
 </div>
 <div class="section" id="creating-multiple-instances">
-<h3><span class="section-number">25.1.3. </span>Creating Multiple Instances<a class="headerlink" href="#creating-multiple-instances" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Multiple Instances<a class="headerlink" href="#creating-multiple-instances" title="Permalink to this headline">¶</a></h3>
 <p>We can create as many instances of a class as we would like. Each such instance will be a separate object, with its own attributes and methods.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -636,10 +659,10 @@ c2 radius: 3
 </div>
 </div>
 <div class="section" id="circle-class-version-2">
-<h2><span class="section-number">25.2. </span>Circle Class: Version 2<a class="headerlink" href="#circle-class-version-2" title="Permalink to this headline">¶</a></h2>
+<h2>Circle Class: Version 2<a class="headerlink" href="#circle-class-version-2" title="Permalink to this headline">¶</a></h2>
 <p>Notice that each of our circles starts out with a default radius of 5, and a center at (0,0). We can easily change these, but it would be helpful if we could specify the desired values when creating an instance of <code class="docutils literal notranslate"><span class="pre">circle</span></code>. We will now update our circle class to allow us to do just that.</p>
 <div class="section" id="constructors">
-<h3><span class="section-number">25.2.1. </span>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h3>
+<h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>constructor</strong> is a method that is called when an instance of a class is created. It is intended to perform the initialization of the class object. In Python, constructors should always have the special name <code class="docutils literal notranslate"><span class="pre">__init__()</span></code>. The constructor must accept <code class="docutils literal notranslate"><span class="pre">self</span></code> as a parameter, but can also accept additional parameters to be used during initialization.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -677,7 +700,7 @@ c3 center: (5,2)
 <p>This provides us with much more flexibility when creating instances of the <code class="docutils literal notranslate"><span class="pre">circle</span></code> class.</p>
 </div>
 <div class="section" id="circle-class-version-3">
-<h3><span class="section-number">25.2.2. </span>Circle Class: Version 3<a class="headerlink" href="#circle-class-version-3" title="Permalink to this headline">¶</a></h3>
+<h3>Circle Class: Version 3<a class="headerlink" href="#circle-class-version-3" title="Permalink to this headline">¶</a></h3>
 <p>Let’s complete our circle class by adding four new methods: <code class="docutils literal notranslate"><span class="pre">contains()</span></code>, <code class="docutils literal notranslate"><span class="pre">intersect()</span></code>, <code class="docutils literal notranslate"><span class="pre">copy()</span></code>, and <code class="docutils literal notranslate"><span class="pre">__str__()</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contains()</span></code> will check to see whether or not a provided point is inside the circle.</p></li>
@@ -731,7 +754,7 @@ c3 center: (5,2)
 </div>
 </div>
 <div class="section" id="the-contains-method">
-<h4><span class="section-number">25.2.2.1. </span>The contains() Method<a class="headerlink" href="#the-contains-method" title="Permalink to this headline">¶</a></h4>
+<h4>The contains() Method<a class="headerlink" href="#the-contains-method" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">contains()</span></code> method accepts three parameters: <code class="docutils literal notranslate"><span class="pre">self</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, and <code class="docutils literal notranslate"><span class="pre">y</span></code>. The parameter <code class="docutils literal notranslate"><span class="pre">self</span></code> is expected to be an instance of the <code class="docutils literal notranslate"><span class="pre">Circle</span></code> class. The parameters <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are expected to be the coordinates of a point. This method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the point provided lies inside the circle, and return <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. This is accomplished by calculating the distance between the center of the circle and the new point. The point lies inside the circle if and only if that distance is less than the radius.</p>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">contains()</span></code> method accepts two parameters named <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, and recall that each <code class="docutils literal notranslate"><span class="pre">circle</span></code> object has attributes named <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. Within the method, the attributes will be stored in <code class="docutils literal notranslate"><span class="pre">self.x</span></code> and <code class="docutils literal notranslate"><span class="pre">self.y</span></code>. These will be distinct from the values of the parameters <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. These parameter values will be created in a local scope when the method is called, and will disappear when the function finishes executing. The attributes, on the other hand, will persist as part of the object itself.</p>
 <p>Let’s now test this method.</p>
@@ -753,7 +776,7 @@ False
 </div>
 </div>
 <div class="section" id="the-intersect-method">
-<h4><span class="section-number">25.2.2.2. </span>The intersect() Method<a class="headerlink" href="#the-intersect-method" title="Permalink to this headline">¶</a></h4>
+<h4>The intersect() Method<a class="headerlink" href="#the-intersect-method" title="Permalink to this headline">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">intersect()</span></code> checks to see if two circles intersect. To accomplish this, the method first calculates the distance between the centers of the circles. If that distance is less than the sum of the circles’ radii and greater than the absolute value of the difference between the radii, then the circles intersect.</p>
 <p>Notice that this method is required to accept two <code class="docutils literal notranslate"><span class="pre">circle</span></code> objects as arguments. These are referred to as <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> within the function definition. The parameter <code class="docutils literal notranslate"><span class="pre">self</span></code> will, as always, reference to the <code class="docutils literal notranslate"><span class="pre">circle</span></code> instance from which the method was called. The object <code class="docutils literal notranslate"><span class="pre">other</span></code> will be provided to the method by listing it between the parentheses.</p>
 <div class="cell docutils container">
@@ -778,7 +801,7 @@ c6 and c7 intersect: False
 </div>
 </div>
 <div class="section" id="the-copy-method">
-<h4><span class="section-number">25.2.2.3. </span>The copy() Method<a class="headerlink" href="#the-copy-method" title="Permalink to this headline">¶</a></h4>
+<h4>The copy() Method<a class="headerlink" href="#the-copy-method" title="Permalink to this headline">¶</a></h4>
 <p>As is the case with lists, when we set a variable equal to another variable containing a class instance, the new variable will refer to the currently existing instance rather than a copy of that instance. We will demonstrate this below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -817,7 +840,7 @@ c9 radius: 9
 </div>
 </div>
 <div class="section" id="the-str-method">
-<h4><span class="section-number">25.2.2.4. </span>The <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this headline">¶</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this headline">¶</a></h4>
 <p>Let <code class="docutils literal notranslate"><span class="pre">__init__()</span></code>, the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method is a special method that can belong to any class, and that performs a specific function. Generally speaking, the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method should return a string that contains some information about a particular instance of the class. This method is called whenever an instance of the class is passed to the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function. In that case, the string returned by the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method is what is actually displayed.</p>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Circle</span></code> is a string that states the center and radius of a <code class="docutils literal notranslate"><span class="pre">Circle</span></code> instance. We will now call print on a <code class="docutils literal notranslate"><span class="pre">Circle</span></code> object to confirm that this information is what is actually displayed.</p>
 <div class="cell docutils container">
@@ -837,11 +860,22 @@ Radius: 9
 </div>
 </div>
 <div class="section" id="application-sensor-network">
-<h2><span class="section-number">25.3. </span>Application: Sensor Network<a class="headerlink" href="#application-sensor-network" title="Permalink to this headline">¶</a></h2>
+<h2>Application: Sensor Network<a class="headerlink" href="#application-sensor-network" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="n">e0e1492b7973</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -862,9 +896,6 @@ Radius: 9
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/classes_33_0.png" src="../_images/classes_33_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -895,13 +926,6 @@ Radius: 9
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">count_sites</span><span class="p">(</span><span class="n">site_list</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">82</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">count_sites</span><span class="p">(</span><span class="n">site_list</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">count_sites</span><span class="p">(</span><span class="n">site_list</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-0
-1
 </pre></div>
 </div>
 </div>
@@ -937,8 +961,8 @@ Radius: 9
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="recursion.html" title="previous page"><span class="section-number">24. </span>Recursion</a>
-    <a class='right-next' id="next-link" href="packages.html" title="next page"><span class="section-number">26. </span>Packages</a>
+    <a class='left-prev' id="prev-link" href="recursion.html" title="previous page">Recursion</a>
+    <a class='right-next' id="next-link" href="section_7.html" title="next page">Packages</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
